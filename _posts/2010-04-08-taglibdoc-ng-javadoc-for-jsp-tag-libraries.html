@@ -1,0 +1,25 @@
+---
+layout: post
+title: taglibdoc-ng - JavaDoc for JSP tag libraries
+tags:
+- javadoc
+- jsp
+- Mixed
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '768798503'
+---
+Recently at work I had to write a set of JSP tag files (as in .tag files, not Java classes) for our designers to use. Naturally, when you write software for someone else to work with you need good documentation. At first I used <a title="TaglibraryDoc Generator" href="https://taglibrarydoc.dev.java.net/">Sun's tool</a> for generating the JavaDoc for those tag files.
+
+Soon, however, I discovered that it had a few bugs: It was borking non-ASCII characters. And there didn't seem to be a way to exclude certain folders so it was often listing tags twice in the resulting documentation. Another gripe I had (which is also the case with the regular JavaDoc tool) was the extremely <a title="Ugly JavaDoc" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Object.html">ugly</a> mid-90s default stylesheet. The tool seemed to have been abandoned (last change in 2005), but I managed to checkout a working copy from their CVS. Stupidly, dev.java.net requires an account to simply checkout code, but luckily I found <a title="dev.java.net on bugmenot" href="http://www.bugmenot.com/view/dev.java.net">account details</a> on bugmenot.
+<h3>The tool</h3>
+Weirdly the code didn't compile straight away as two classes were missing, but I just rewrote them. I also added a nicer stylesheet, which I pinched from JBoss.
+
+<a href="http://www.flickr.com/photos/24003367@N00/4445500928/"><img class="aligncenter" title="Screenshot of taglibdoc-ng" src="http://farm3.static.flickr.com/2704/4445500928_28bb98d502.jpg" alt="Screenshot of taglibdoc-ng" width="500" height="415" /></a>
+
+The character encoding issues simply went away by recompiling the project with Java 1.5 compatibility settings. I also put the code under Mercurial version control (screw CVS) and uploaded it to my bitbucket.
+<h3>Getting it</h3>
+Just go to <a href="http://bitbucket.org/lenniboy/taglibdoc-ng/wiki/Home">taglibdoc-ng's page on bitbucket</a> and read the technical details. Or you simply head over to the <a title="Downloads" href="http://bitbucket.org/lenniboy/taglibdoc-ng/downloads/">downloads page</a> and grab the latest JAR. I have plans to put it up on Maven Central, but to be honest have never done that so will have to find out how easy that is.

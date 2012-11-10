@@ -1,0 +1,20 @@
+---
+layout: post
+title: TinyURL bookmarklet
+tags:
+- bookmarklet
+- Mixed
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '796871403'
+---
+Do you love TinyURL but wished that there was an easier way of creating your shortened URLs? Here it is: I have written a little bookmarklet which is heavily influenced by the delicious one.
+
+Just drag the following link to your bookmarks bar:
+
+<a href="javascript:(function(){f='http://tinyurl.com/create.php?url='+encodeURIComponent(window.location.href);a=function(){if(!window.open(f,'TinyURL','location=yes,links=no,toolbar=no,width=550,height=550'))location.href=f+'jump=yes'};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})()">TinyURL!</a>
+
+Let me know how it is working in the comments.

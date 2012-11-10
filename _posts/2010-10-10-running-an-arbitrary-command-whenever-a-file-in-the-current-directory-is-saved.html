@@ -1,0 +1,31 @@
+---
+layout: post
+title: Running an arbitrary command whenever a file in the current directory is saved
+tags:
+- Mixed
+- python
+status: publish
+type: post
+published: true
+meta:
+  _wp_old_slug: ''
+  _edit_last: '1'
+  dsq_thread_id: '756516441'
+---
+I've been brushing up my CV recently and this time have made the effort to do it in Latex. I usually do Latex stuff with vim as my text editor and and excellent PDF reader for OS X called <a href="http://skim-app.sourceforge.net/">Skim</a>.
+
+[caption id="" align="aligncenter" width="500" caption="vim and Skim tiled"]<a href="http://www.flickr.com/photos/lenniboy/5068533511/sizes/m/in/photostream/"><img title="vim and Skim tiled" src="http://farm5.static.flickr.com/4090/5068533511_2b269c291f.jpg" alt="" width="500" height="313" /></a>[/caption]
+
+Skim is able to detect, when the currently loaded PDF is being changed on disk and can automatically reload it. However, one slightly annoying problem I encountered was that I had to Alt-Tab to a terminal and run the Latex compiler after saving the .tex file. What I really wanted was to be able to run the compiler automatically when a file in the current directory is changed.
+<h3>runonsave.py</h3>
+Trusty old Python came to the rescue: I wrote a little script that recursively  scans the current directory every 5 seconds and executes an arbitrary command, when a file has been changed since the last scan.
+
+You can install it with the following one liner (I'm assuming ~/bin exists and is on your PATH):
+<pre lang="bash">cd ~/bin && wget http://github.com/lenniboy/runonsave/raw/master/runonsave.py && chmod +x runonsave.py</pre>
+If you want to watch the current directory for changes and and then run the Latex compiler simply do a
+<pre lang="bash">runonsave.py pdflatex cv.tex</pre>
+This works with any command - not only with Latex. One other use case I could think of was regenerating your image sprites when you have saved an image and all sorts of other asset packing.
+
+The script also automatically ignores common SCM folders. Just be careful if you are watching a huge directory tree; in this case you probably want to lower the time between scans. (At the moment this time is hard-coded in but I'm planning to use optparse in the future).
+
+The script also has a <a href="http://github.com/lenniboy/runonsave/">repository</a> on Github. If you have any improvements, for example using a better way to figure out if something has changed, go ahead and fork it.

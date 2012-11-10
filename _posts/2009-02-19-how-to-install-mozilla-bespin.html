@@ -1,0 +1,41 @@
+---
+layout: post
+title: How to install Mozilla Bespin
+tags:
+- bespin
+- editor
+- javascript
+- Mixed
+- mozilla
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '756516068'
+---
+<a href="http://labs.mozilla.com/projects/bespin/">Mozilla Bespin</a> a cool new project that lets you edit your code online Google Docs-style. The project has so much potential and I'm really excited what's going to happen with this.
+
+If you want to take Bespin for a little spin you can either check out the <a href="http://bespin.mozilla.com/">online demo</a> or install the whole thing on your own machine. Here is how.&nbsp;These instructions have been tested on OS X. I can't see a reason why it wouldn't work with other *nix platforms and maybe even on Windows. Let me know in the comments how it is working.
+
+Firstly, you will need to grab the source. If you have mercurial installed then just do a&nbsp;
+
+<code>hg clone&nbsp;http://hg.mozilla.org/labs/bespin/</code>
+
+Otherwise just download the <a href="http://hg.mozilla.org/labs/bespin/archive/tip.tar.gz">tarball</a> and extract it somewhere in you home directory.
+
+Once your have&nbsp;everything&nbsp;on your hard disk open a terminal and go into the Bespin directory. Then change into the backend folder
+
+<code>cd backend/python</code>
+
+and install all the requirements with&nbsp;
+
+<code>python bootstrap.py</code>&nbsp;
+
+This will take a few moments. After it is finished configure your installation and start the local server with the following three commands:
+
+<code>source bin/activate
+paver create_db
+paver start</code>
+
+If &nbsp;you see something like&nbsp;<code>Server starting on localhost:8080</code> in the terminal it means everything went well and you are good to go. Just point your browser to <a href="http://localhost:8080">http://localhost:8080</a> and off you go.

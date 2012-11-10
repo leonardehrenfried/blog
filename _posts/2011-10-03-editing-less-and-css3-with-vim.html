@@ -1,0 +1,45 @@
+---
+layout: post
+title: Editing LESS and CSS3 with Vim
+tags:
+- css
+- less
+- Mixed
+- vim
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '758272507'
+---
+<h3>A thought or two about CSS precompilers</h3>
+I had heared of Sass repeatedly for a while now but so far I had always mentally filed CSS precompilers under "Interesting concept, but probably not all that useful for me". I thought that CSS is fine as it is and after all it's just a bunch of style definitions, right?
+
+On the other hand I grew to actively dislike handling CSS files. I didn't quite understand at the time that this had mostly to do with their great redundancy and repetition.  When you've been used to something's mediocrity for so long you don't really noticed those weaknesses anymore.
+
+When a coworker suggested using a CSS precompiler to help our <a href="http://stackoverflow.com/questions/2253110/how-to-manage-css-explosion">CSS explosion</a>, I was pretty sceptical. But I like learning new things so we went ahead and introduced <a href="http://lesscss.org/">LESS</a> in our current project.
+
+What a difference! I may end up sounding like a used-car salesman but it really is a difference like day and night. I'd love to tell you lots of reasons why these precompilers are great, but unfortunately Jason Z. from 37 signals has done a <a href="http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade">much better job</a>.
+<h3>Wasn't this post suppossed to be about Vim?</h3>
+Lets talk business then. I'm using Vim to edit LESS and it looks like this:
+
+[caption id="" align="aligncenter" width="450" caption="Vim with vim-less, vim-css3-syntax, vim-css-colors"]<img class="   " src="https://github.com/lenniboy/vim-less/raw/master/screenshot.png" alt="Vim with vim-less, vim-css3-syntax, vim-css-colors" width="450" height="349" />[/caption]
+
+I can recommend a trio of plugins for LESS and general CSS3 editing:
+<h4><a href="https://github.com/groenewege/vim-less">vim-less</a></h4>
+This plugin's syntax highlighting was fairly feature-rich to begin with but I have added a few extra features including indenting and autocompletion and the original author has merged them back to his branch. The plugin's compatibility has led me to check out vim-css-colors.
+<h4><a href="https://github.com/skammer/vim-css-color">vim-css-colors</a></h4>
+This great plugin visualises a color expressed in hex, RGBa or HSLa and paints the background underneath it in the corresponding color. If you're not sure what I mean, here's screenshot:
+
+<img class="aligncenter" src="https://github.com/skammer/vim-css-color/raw/master/Screen%20shot%202010-07-04%20at%200.19.46.png" alt="" width="455" height="292" />
+
+This may look like a toy to some, but LESS lets you have a file with just the colour palette of your app/website and seeing them all visualised is very nice. It also helps you to reuse the same variable name for each colour rather than re-introducing new ones.
+<h4><a href="https://github.com/hail2u/vim-css3-syntax">vim-css3-syntax</a></h4>
+This has a very complete syntax file for CSS3 and I have  added support for this plugin in vim-less. That works pretty well and those fancy new CSS3 properties are then also displayed with correct syntax highlighting applied.
+<h3>Improvements for the future</h3>
+The current autocomplete (hit Ctr-X, Ctrl-O if you've never used it) that ships with standard Vim is pretty complete for CSS2. However there is no autocomplete script for CSS3. Looking at the <a href="http://code.google.com/p/vim/source/browse/runtime/autoload/csscomplete.vim">CSS2 version</a>, it shouldn't actually be too hard to parse the syntax highlight files and add the new properties to the existing script.
+
+I'd also like to implement a syntax checker but looking the the source of lessc, LESS' command line compiler, there doesn't seem to be a validating phase that I could use.
+
+I also saw that some web-based CSS prettifyiers can order CSS properties alphabetically. Wouldn't that be a neat feature for Vim?

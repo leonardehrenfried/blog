@@ -1,0 +1,30 @@
+---
+layout: post
+title: Sniffing HTTP headers and traffic on OS X
+tags:
+- http
+- Mixed
+- sniffing
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+---
+This week at work I had to do some tricky debugging of some HTTP headers. Unfortunately, there are no special purpose HTTP tools available for OS X and I really needed to look at the raw headers. Developer tools like Firebug and Web Inspector only show you the HTTP headers they think you are interested in, but not all.
+
+Well, there is one widely used <em>packet</em> sniffing tools available for OS X: wireshark. but they need a lot of command line tweaking of filters in order to be useful for analysing HTTP traffic. In the end, however, I managed and will show you how I did it.
+
+First install wireshark. I'm using macports so for me this was a
+
+<pre lang="bash">
+sudo port install wireshark
+</pre>
+
+Then you'll want to listen on a specific interface for traffic. In my case that was <code>en1</code>. You must also tell tshark, the command line version of wireshark, that you're interested in HTTP traffic, but not all the SYN/ACK packets that do the connection handshake with <code>-f "tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)"</code>
+
+<pre>tshark -i en1 \
+-f "tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)" \
+-R "ip.addr==46.137.106.50 and http.request.uri contains graph" -V</pre>
+
+In my case I found out later that Safari was sending an <code>Authorization</code> header, which I couldn't see in the Resources tag in Web Inspector.

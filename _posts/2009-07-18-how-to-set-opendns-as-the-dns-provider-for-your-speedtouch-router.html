@@ -1,0 +1,33 @@
+---
+layout: post
+title: How to set OpenDNS as the DNS provider for your Speedtouch router
+tags:
+- dns opendns speedtouch router
+- Mixed
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '757836182'
+---
+Here is a really neat trick on how to speed up your home internet quickly and for free.
+<h3>A little background</h3>
+Basically every time a browser requests a page from an human-readable address like google.com, it first needs to find out the IP address for the server. This lookup takes some time and is provided by DNS servers. However, most ISP's DNS servers are slow because no one asks "How fast is the DNS lookup?" when they shop around for broadband.
+<h3>OpenDNS</h3>
+<a href="http://www.opendns.com/">OpenDNS</a> is a free service that does faster DNS lookup than your broadband provider. They finance themselves by showing you a suggestions page when you mistype an address and this suggestions page has some ads on it. For me that isn't obstructive at all.
+<h3>How to do it</h3>
+The Speedtouch routers don't have a GUI for changing the DNS servers so you need to login via the command line program telnet into the router, which by default has the address 192.168.1.254 . If you have changed the IP address of your router you will need to use that instead.
+<pre lang="html4strict">telnet 192.168.1.254</pre>
+The default user for Speedtouch routers is Administrator and the default password is just blank. Obviously if you changed these setting then you'll have to enter those details.
+
+Now you need to issue three commands which change the DNS settings. First delete the old DNS settings:
+<pre lang="html4strict">dns server route flush</pre>
+Then add the two OpenDNS ones:
+<pre lang="html4strict">dns server route add dns=208.67.222.222 metric=1 intf=RoutedEthoA
+dns server route add dns=208.67.220.220 metric=1 intf=RoutedEthoA
+</pre>
+Now save everything with
+<pre lang="html4strict">saveall
+</pre>
+That's it. Try it out now by mistyping an address, if you can see the OpenDNS page then you've done it!

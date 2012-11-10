@@ -1,0 +1,31 @@
+---
+layout: post
+title: Installing miranda on Mac OS X
+tags:
+- miranda
+- Mixed
+- os x
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1480624'
+  dsq_thread_id: '757707651'
+---
+EDIT: It seems that miranda is again distributed as a .tgz archive, therefore revert back to the original instructions <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/downloads/macos/instructions">here</a>.
+
+This is little walk-through for installing the Miranda programming language on OS X. There are the original instructions <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/downloads/macos/instructions">here</a>, but they things have changed a little since that document was written. Hence this little write-up.
+
+Firstly, download the OS X tarball from the <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/downloads/">Miranda downloads page</a>&nbsp;or the <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/downloads/macos">direct download link</a>.
+
+Open your OS X Terminal (search for it in Spotlight) and go to the directory the tarball was downloaded to.
+
+Then type&nbsp;
+
+<code>sudo tar xpf mira-2032-MacOSX.tar -C /</code>
+
+This installs bunch of files in your /usr directory, hence the required su access. That's it. Just run
+
+<code>mira&nbsp;</code>
+
+and off you go. If you know about a nice IDE or editor with syntax highlighting please post it in the comments.

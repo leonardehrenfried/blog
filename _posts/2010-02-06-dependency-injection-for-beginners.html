@@ -1,0 +1,78 @@
+---
+layout: post
+title: Dependency injection for beginners
+tags:
+- dependency injection
+- Mixed
+- modularisation
+- software design
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '756516261'
+---
+<h3>Pro-forma preamble</h3>
+When I started learning how dependency injection works it was extremely hard for me to understand. Once I got what it does I still didn't quite get what the benefits of this technique were. I just thought it was some overly complex design pattern that is just making life difficult for the sake of it. After all, what is so bad about using <code>new</code> anyway?
+
+Well, in this blog post I want to share what I have learned about dependency injection since leaving university and a becoming full-time programmer last September. I hope I can help a newbie to understand a little more about this design approach. Don't be frustrated, however, if you don't get it straight away: It took me the best part of my first month to really dive into dependency injection even though I had read lots of articles and blog posts about the topic.
+<h3>Dependency injection vs. Inversion of control</h3>
+Some authors strangely claim that DI is the same thing as IoC. I however think that DI is a type of IoC, namely to tell the to be injected object what its dependencies are. Inversion of control, to me, means something more general: That there is a predefined workflow (the control part) that the developer hooks her own components into. This principle applies to virtually all libraries and frameworks. For example, your favourite web development framework allows you to write a request handler for a URL, but most likely you can't change the nature of the request itself. You will always receive a <code>HttpRequest</code> as the input of your request handling code. Dependency injection however is a specialisation of this principle.
+<h3>Modules and dependencies</h3>
+When you start to build big systems you naturally tend to modularise. Lets take online shopping as an example. You have one module of your code handling the user input for an order and validating form fields; lets call this module the <code>OrderHandler</code>. Then you have another module, which opens a connection to your payment provider and checks that the credit card data the user just gave are actually kosher and the payment can go ahead. We call this module the <code>CreditCardPaymentService</code>.
+
+So, when the OrderHandler has validated all the form fields it passes the data over to the <code>CreditCardPaymentService</code>. But before it can do that it needs to have or create an instance of the <code>CreditCardPaymentService</code>. In (pseudo-) code this would probably look something like this:
+<pre lang="python">class OrderHandler:
+   this.payment_service = new CreditCardPaymentService()
+   handle_request(request):
+     # do something to validate the user input...
+     payment_data = request.get_parameters()
+     response = this.payment_service.handle_payment(payment_data)
+     if response.successful():
+         return new HttpResponse("Payment accepted")
+     else:
+         return new HttpResponse("Payment declined")</pre>
+So far, so good. But what happens when you have quite a few parts of your code taking orders and querying the PaymentService? They all call <code>new CreditCardPaymentService</code>.
+Now, your boss has decided your going to switch from your old credit card provider to Paypal. You write a new PaymentProvider that sends a request to their server and authorises the payment. When you actually want to switch over, you will have to replace all instances of <code>CreditCardPaymentProvider</code> with <code>PaypalPaymentProvider</code>. Once you do these kinds of thing a lot, you'll end up thinking that there's got to be a better way to do this.
+<h3>DI to the rescue</h3>
+What if all the different modules of your shopping website, instead of creating new instances of <code>PaymentProviders,</code> would instead be given (or <em>injected</em>) those modules?
+
+Maybe we could rewrite the above code like this:
+<pre lang="python">class OrderHandler:
+
+ this.payment_service=None
+
+ set_payment_service(payment_service):
+    this.payment_service=payment_service
+
+ handle_request(request):
+    # do something to validate the user input...
+    payment_data = request.get_parameters()
+    response = this.payment_service.handle_payment(payment_data)
+    if response.successful():
+        return new HttpResponse("Payment accepted")
+    else:
+        return new HttpResponse("Payment declined")</pre>
+Obviously now it is easy to exchange on payment provider with another one. The downside of this that you have to pre-configure the <code>OrderHandler</code> with some type of <code>PaymentProvider</code>. Most DI frameworks do this using Factories and assign each configured, ready-to-use object a string. A factory is supplied with some configuration file that defines those objects and their dependencies.
+Those config files could look like this:
+<pre lang="css">/* objects.conf */
+#cc_order_handler{
+  class: OrderHandler
+  payment_service: CreditCardPaymentService
+}
+
+#paypal_order_handler{
+  class: OrderHandler
+  payment_service: PaypalPaymentService
+}</pre>
+We now have a central piece of code that handles each module's dependencies. It basically instantiates the OrderHandler, sets the right payment service and then gives this object to whoever wants to use it. If we wanted to fetch on of the order handlers we would do it like this.
+<pre lang="python">factory = new ObjectFactory("objects.conf")
+paypal_payment_handler = factory.getObject("paypal_order_handler")</pre>
+What you have done now is to externalise the configuration process of  the <code>Handler</code> from inside it to the factory with calls the set_payment_provider method before it returns it to whoever is requesting the object.
+
+As an added benefit we can now easily unit-test the <code>OrderHandler</code> by creating and injecting a fake PaymentService that always returns a positive response.
+<h3>Implementations</h3>
+This principle is currently used in a lot of enterprise Java applications. The most popular   framework that uses this pattern is <a href="http://www.springsource.org/">Spring</a>. Spring uses XML files for configuration and much of what I described above stems directly from Spring, which actually many more things and DI is just one, albeit central, aspect of the framework.
+
+Another piece of code I also want to have a look at is Google's <a href="http://code.google.com/p/google-guice/">Guice</a> which superficially looks less all-singing, all-dancing, but still very interesting.

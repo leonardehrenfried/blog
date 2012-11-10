@@ -1,0 +1,40 @@
+---
+layout: post
+title: Mavens's "The artifact has no valid ranges"
+tags:
+- apache
+- error
+- java
+- maven
+- Mixed
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '761564810'
+---
+I have just learned to use the really great Java build and project management tool <a href="http://maven.apache.org/">Maven</a>. It makes managing large projects with dozens of components a lot easier and its build configuration is simpler and less imperative compared to Ant, since it relies a lot on convention over configuration. Basically, Maven knows that pretty much every project needs to be
+<ul>
+	<li>compiled</li>
+	<li>JavaDoc'd</li>
+	<li>unit tested</li>
+</ul>
+These things don't need to be declared and are automatically done by Maven. Maven's great advantage over Ant is it's ability to handle the dependencies of your project, ie. the old "Hunt the JAR" game is a thing of the past as Maven will simply download whatever libraries or frameworks you will need. Most of the time your build will run smoothly and Maven will spit out a nice JAR or WAR without problems.
+<h3>The curious error message</h3>
+However, if there are build errors they tend to be on the cryptic side. "The artifact has no valid ranges" is one of those. Basically it means that you <em>do have</em> a valid range, however you have defined two (or more) <em>different version ranges of an artifact</em> in a fixed way. Most likely you haven't defined those dependencies in the same project but through a transitive dependency.
+
+Let's have an example. Your project <em>my-app</em>, depends on an artifact <em>super-framework</em> at version 1.0, and only 1.0, nothing else. <em>my-app</em> also depends on another of your apps called<em> my-app2</em>. <em>my-app2</em> has a dependency on <em>super-framework</em> but only for versions 0.5 to 0.9. This means that you have incompatible version ranges and you need to resolve this. You will have to edit <em>my-app</em> or <em>my-app2</em> and change their version ranges for <em>super-framework</em>.
+
+This took me a little while to figure out myself since the error kinda suggests to look in the wrong place. The range is perfectly valid, it's just that there is too many of them.
+<h3>Debugging this message</h3>
+That is a little tricky. You can try running Maven with the -X flag, which will show a running log of how the version is chosen. Also, sometimes the Maven plugin for Eclipse can give you some clues, but sometimes it is way off.
+
+One word of advice though, it seems to matter in which order you include your dependencies in the the POM file. So, if you include a dependency on
+<pre lang="html4strict">super-framework [0.5,1.5)</pre>
+it will fetch the latest available version, say 1.1.
+
+If you then have a transitive dependency further down that includes
+<pre lang="html4strict">super-framework [0.5, 1.0)</pre>
+
+Maven will generate this misleading error, since it will not select anything other than the 1.1 it already has, even though it could just select 0.9 without producing a version conflict. If you swap the order, weirdly, it works.
