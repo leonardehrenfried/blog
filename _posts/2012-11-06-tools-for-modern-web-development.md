@@ -79,9 +79,7 @@ This free, community-curated CDN hosts Javascript libraries like Backbone, momen
 ### Misc.
 
 #### [Fontello][9]
-Fontello is a fantastic app with has taken the pain away from using icon fonts. They collected a hand full of very popular icon fonts (
-
-[Entypo][10], for example), have given each icon character a simple name and make this all available as single webfont file (in all formats you'll ever need) plus a handy stylesheet. This lets you create icons by simply applying a CSS class to an element, just as it is done in Twitter Bootstrap. <img class="aligncenter" title="Fontello" src="https://lh5.googleusercontent.com/-fj4HRCQhhxQ/UJgkMDywG3I/AAAAAAAAIRU/H5NWQF-UcEA/s229/Screen%2520Shot%25202012-11-05%2520at%252021.39.53.png" alt="" width="229" height="174" /> If you suggest this in your team, your designer will love you since this frees her/him up to do actual design rather than spitting out PNG after PNG for your icons. Plus you can style your icons with CSS and you have a lot less HTTP requests during page load.
+Fontello is a fantastic app with has taken the pain away from using icon fonts. They collected a hand full of very popular icon fonts ([Entypo][10], for example), have given each icon character a simple name and make this all available as single webfont file (in all formats you'll ever need) plus a handy stylesheet. This lets you create icons by simply applying a CSS class to an element, just as it is done in Twitter Bootstrap. <img class="aligncenter" title="Fontello" src="https://lh5.googleusercontent.com/-fj4HRCQhhxQ/UJgkMDywG3I/AAAAAAAAIRU/H5NWQF-UcEA/s229/Screen%2520Shot%25202012-11-05%2520at%252021.39.53.png" alt="" width="229" height="174" /> If you suggest this in your team, your designer will love you since this frees her/him up to do actual design rather than spitting out PNG after PNG for your icons. Plus you can style your icons with CSS and you have a lot less HTTP requests during page load.
 #### JSON formatting
 
 [jq][11] is pretty nice tool for querying a JSON document but if all you need is a pretty printer you can pipe your JSON through a built in python module with the following one-liner:

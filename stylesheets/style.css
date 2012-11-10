@@ -164,10 +164,16 @@ address {
   margin:0 0 1.5em;
 }
 
-pre {
+code, pre{
   white-space:pre;
+  font-family: 'andale mono', 'lucida console', monospace;
+  font-size: 13px;
+}
+pre code{
+  font-size: 12px;
+}
+pre{
   margin:1.5em 0;
-  font: 11px 'andale mono', 'lucida console', monospace;
   line-height:1.5;
   background: #272822;
   color: #f8f8f2;
