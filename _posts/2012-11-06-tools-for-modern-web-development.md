@@ -30,15 +30,18 @@ Are you tired of re-adding Bootstrap to your repositories over and over or using
 
 #### Grunt
 
-<img title="grunt.js" src="https://lh6.googleusercontent.com/-rC0dC5mG4Pk/UJgVyx8ORJI/AAAAAAAAIQw/Q4M0-N92Q08/s512/logo.png" alt="" width="307" height="307" />
+![Alt text](https://lh6.googleusercontent.com/-rC0dC5mG4Pk/UJgVyx8ORJI/AAAAAAAAIQw/Q4M0-N92Q08/s512/logo.png)
 One of my more recent discoveries is a JavaScript build tool called [grunt][5]. Even though I guess you could use it to build node modules, it is really meant for frontend coding tasks. If you've ever written your own scripts to glue together jshint, uglify, file concatenation and rsync and wondered if there is a better way, grunt can help you. It is ideal not only for those things but has plugins for virtually everything like:
-*   CoffeeScript, including on-the-fly compilation if a file is modified
-*   CSS Compression
-*   LessCSS compilation
-*   Live Reload of a website without browser plugins (more about this in the next section) Yes, there is a bewildering array of JS build tools (Jake, Cake, Yeoman, Buildr, custom ant scripts... the list goes on) but I found grunt so far the most pleasurable to use. Go try it out.
+
+* CoffeeScript, including on-the-fly compilation if a file is modified
+* CSS Compression
+* LessCSS compilation
+* Live Reload of a website without browser plugins (more about this in the next section)
+
+Yes, there is a bewildering array of JS build tools (Jake, Cake, Yeoman, Buildr, custom ant scripts... the list goes on) but I found grunt so far the most pleasurable to use. Go try it out.
 
 #### [Grunt Live Reload plugin][6]
-Frankly, this is like magic. What this enables you to do is to hit save in your favourite text editor and have this automatically trigger a refresh of the page you are working on. And all of that without even installing a browser extension. The way this works is by injecting a little snippet of JavaScript into the page which in turn opens a Websocket connection to the development server which watches for changes on the file system. Here is an example`grunt.js` file to achieve this:
+Frankly, this is like magic. What this enables you to do is to hit save in your favourite text editor and have this automatically trigger a refresh of the page you are working on. And all of that without even installing a browser extension. The way this works is by injecting a little snippet of JavaScript into the page which in turn opens a Websocket connection to the development server which watches for changes on the file system. Here is an example `grunt.js` file to achieve this:
 {% highlight javascript %}
 module.exports = function (grunt) {
   grunt.initConfig({

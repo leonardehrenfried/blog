@@ -67,6 +67,10 @@ a img {
   border:none;
 }
 
+header{
+  text-align: center;
+}
+
 h1 {
   font-weight:400;
   color:#222;
@@ -132,7 +136,7 @@ a:link {
   text-decoration:underline;
 }
 
-.post a, .comments p a{
+article a, .comments p a{
   color:#36c;
 }
 
@@ -274,33 +278,33 @@ nav ul li a:visited {
   font-size:13px;
 }
 
-.post {
+article {
   margin-bottom:20px;
   padding-top:5px;
 }
 
-.post h2 {
+article h2 {
   text-align:center;
   font-size:26px;
   margin-bottom:6px;
 }
 
-.post h2 a {
+article h2 a {
   color:#000;
   text-decoration:none;
 }
 
-.post h2 a:hover {
+article h2 a:hover {
   opacity:0.8px;
 }
 
-.post p, .post ul, .post ol, .comments ol {
+article p, article ul, article ol, .comments ol {
   text-align:justify;
   font-family:helvetica, verdana, arial, sans-serif;
   text-justify:newspaper;
 }
 
-.post p.caption {
+article p.caption {
   font-weight:700;
   font-family:helvetica, verdana, arial, sans-serif;
   font-size:11px;
@@ -309,6 +313,10 @@ nav ul li a:visited {
   padding-bottom:0;
   margin-bottom:10px;
   text-align:left;
+}
+
+article img{
+  display:block;
 }
 
 .date,
@@ -322,19 +330,19 @@ nav ul li a:visited {
   margin-bottom:10px;
 }
 
-.post blockquote {
+article blockquote {
   border-left:2px solid #ccc;
   padding-left:15px;
 }
 
-.post .meta {
+article .meta {
   width:500px;
   font-family:helvetica, verdana, arial, sans-serif;
   font-size:11px;
   padding-top:10px;
 }
 
-.post .meta .notes a {
+article .meta .notes a {
   color:#aaa;
   padding-left:16px;
   background-image:url('http://static.tumblr.com/fw3zutj/YuJl22f39/notes.gif');
@@ -345,13 +353,13 @@ nav ul li a:visited {
   font-weight:700;
 }
 
-.post .meta .permalink {
+article .meta .permalink {
   float:right;
   display:inline-block;
   position:relative;
 }
 
-.post .meta .permalink a {
+article .meta .permalink a {
   color:#aaa;
   height:18px;
   text-indent:-999px;
@@ -362,7 +370,7 @@ nav ul li a:visited {
   background-position:right center;
 }
 
-.post .meta .tags {
+article .meta .tags {
   border:0;
   outline:0;
   width:400px;
@@ -373,7 +381,7 @@ nav ul li a:visited {
   padding:0 0 0 20px;
 }
 
-.post .meta .tags a {
+article .meta .tags a {
   list-style-type:none;
   margin-left:0;
   white-space:nowrap;
@@ -383,20 +391,20 @@ nav ul li a:visited {
   padding-right:4px;
 }
 
-.post .meta .tags a.first {
+article .meta .tags a.first {
   padding-left:0;
 }
 
-.post .meta .tags a.last {
+article .meta .tags a.last {
   padding-right:0;
 }
 
-.post .meta .tags {
+article .meta .tags {
   color:#aaa;
   text-decoration:none;
 }
 
-.post pre{
+article pre{
   overflow-y:auto;
 }
 
@@ -556,7 +564,7 @@ del,.quiet {
   color:#666;
 }
 
-.post .meta:after,.post .meta .tags ul:after {
+article .meta:after,article .meta .tags ul:after {
   content:".";
   display:block;
   clear:both;
@@ -565,7 +573,7 @@ del,.quiet {
   height:0;
 }
 
-.post .meta .notes,.post .meta .tags {
+article .meta .notes,article .meta .tags {
   float:left;
   display:inline-block;
 }
