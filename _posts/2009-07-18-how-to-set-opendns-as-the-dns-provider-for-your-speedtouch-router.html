@@ -18,16 +18,16 @@ Basically every time a browser requests a page from an human-readable address li
 <a href="http://www.opendns.com/">OpenDNS</a> is a free service that does faster DNS lookup than your broadband provider. They finance themselves by showing you a suggestions page when you mistype an address and this suggestions page has some ads on it. For me that isn't obstructive at all.
 <h3>How to do it</h3>
 The Speedtouch routers don't have a GUI for changing the DNS servers so you need to login via the command line program telnet into the router, which by default has the address 192.168.1.254 . If you have changed the IP address of your router you will need to use that instead.
-<pre lang="html4strict">telnet 192.168.1.254</pre>
+<pre lang="html4strict">telnet 192.168.1.254{% endhighlight %}
 The default user for Speedtouch routers is Administrator and the default password is just blank. Obviously if you changed these setting then you'll have to enter those details.
 
 Now you need to issue three commands which change the DNS settings. First delete the old DNS settings:
-<pre lang="html4strict">dns server route flush</pre>
+<pre lang="html4strict">dns server route flush{% endhighlight %}
 Then add the two OpenDNS ones:
 <pre lang="html4strict">dns server route add dns=208.67.222.222 metric=1 intf=RoutedEthoA
 dns server route add dns=208.67.220.220 metric=1 intf=RoutedEthoA
-</pre>
+{% endhighlight %}
 Now save everything with
 <pre lang="html4strict">saveall
-</pre>
+{% endhighlight %}
 That's it. Try it out now by mistyping an address, if you can see the OpenDNS page then you've done it!

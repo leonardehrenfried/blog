@@ -32,7 +32,7 @@ So, when the OrderHandler has validated all the form fields it passes the data o
      if response.successful():
          return new HttpResponse("Payment accepted")
      else:
-         return new HttpResponse("Payment declined")</pre>
+         return new HttpResponse("Payment declined"){% endhighlight %}
 So far, so good. But what happens when you have quite a few parts of your code taking orders and querying the PaymentService? They all call <code>new CreditCardPaymentService</code>.
 Now, your boss has decided your going to switch from your old credit card provider to Paypal. You write a new PaymentProvider that sends a request to their server and authorises the payment. When you actually want to switch over, you will have to replace all instances of <code>CreditCardPaymentProvider</code> with <code>PaypalPaymentProvider</code>. Once you do these kinds of thing a lot, you'll end up thinking that there's got to be a better way to do this.
 <h3>DI to the rescue</h3>
@@ -53,7 +53,7 @@ Maybe we could rewrite the above code like this:
     if response.successful():
         return new HttpResponse("Payment accepted")
     else:
-        return new HttpResponse("Payment declined")</pre>
+        return new HttpResponse("Payment declined"){% endhighlight %}
 Obviously now it is easy to exchange on payment provider with another one. The downside of this that you have to pre-configure the <code>OrderHandler</code> with some type of <code>PaymentProvider</code>. Most DI frameworks do this using Factories and assign each configured, ready-to-use object a string. A factory is supplied with some configuration file that defines those objects and their dependencies.
 Those config files could look like this:
 <pre lang="css">/* objects.conf */
@@ -65,10 +65,10 @@ Those config files could look like this:
 #paypal_order_handler{
   class: OrderHandler
   payment_service: PaypalPaymentService
-}</pre>
+}{% endhighlight %}
 We now have a central piece of code that handles each module's dependencies. It basically instantiates the OrderHandler, sets the right payment service and then gives this object to whoever wants to use it. If we wanted to fetch on of the order handlers we would do it like this.
 <pre lang="python">factory = new ObjectFactory("objects.conf")
-paypal_payment_handler = factory.getObject("paypal_order_handler")</pre>
+paypal_payment_handler = factory.getObject("paypal_order_handler"){% endhighlight %}
 What you have done now is to externalise the configuration process of  the <code>Handler</code> from inside it to the factory with calls the set_payment_provider method before it returns it to whoever is requesting the object.
 
 As an added benefit we can now easily unit-test the <code>OrderHandler</code> by creating and injecting a fake PaymentService that always returns a positive response.

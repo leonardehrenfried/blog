@@ -21,7 +21,7 @@ Paperclip seems to have the limitation that it only allows one attachment per mo
 You will have to install an image processor. This is described in many other <a href="http://significantbits.wordpress.com/2007/04/06/using-attachment_fu-by-techno-weenie-to-add-image-attachment-support-to-your-rails-application/">blog posts</a> so I won't regurgitate it here. I personally went with ImageMagick and rmagick. Seems to work fine.
 
 Once you've done that you obviously have to install the plugin itself with:
-<pre lang="bash">./script/plugin install http://github.com/technoweenie/attachment_fu.git</pre>
+<pre lang="bash">./script/plugin install http://github.com/technoweenie/attachment_fu.git{% endhighlight %}
 <strong>Edit:</strong> Rails 3 has been released shortly after I wrote this post and this plugin doesn't work anymore. However there is an alternative branch on Github, which you can install with:
 
 Be warned though that you can't
@@ -44,7 +44,7 @@ You will need to use a separate model to store all the attachment meta data. I h
       def self.down
         drop_table :photos
       end
-end</pre>
+end{% endhighlight %}
 Here's the model class. Also, read up on the official docu about the all the possible options - the plugin is really quite flexible.
 <pre lang="ruby">class Photo > ActiveRecord::Base
 
@@ -57,7 +57,7 @@ Here's the model class. Also, read up on the official docu about the all the pos
   validates_as_attachment
 
   belongs_to :article
-end</pre>
+end{% endhighlight %}
 <h3>Controller &amp; form</h3>
 A lot of tutorials say that you should set up your own controller for the image upload. But that would mean that you have to use a separate form for uploading images. What I wanted to do was to also use the ordinary page editing form for image uploads. So, I found a <a href="http://www.ruby-forum.com/topic/164189">forum post</a> that put me on the right track and after a bit more of trial and error I figured it out.
 
@@ -84,5 +84,5 @@ With the <code>file_field_tag</code> part you are telling Rails that it should n
     end
   end
 
-end</pre>
+end{% endhighlight %}
 I couldn't find a good tutorial on how this is done so I hope someone wanting to do the same will find this page. Happy coding.

@@ -28,14 +28,14 @@ Xetex allows you to type set a document using all of UTF-8 supported scripts wit
 Some additional features, which might or might not be interesting for you, are improved font support for OTF files and some advanced ligatures features. All of this might not rock your world but it is all nice to know that it is there. In short XeTex is a modern Tex system.
 <h3>Installation and invokation</h3>
 Xetex has since 2007 been incorporate by the TexLive distribution. There is an ordinary installation package for OS X but I prefer to use Macports for my package management, so I will walk you through that. First of all install the texlive base package with a
-<pre lang="bash">sudo port install texlive</pre>
+<pre lang="bash">sudo port install texlive{% endhighlight %}
 Sit back, this will take a while. The command installs the binaries and a "medium" amount of packages, however, if you are a heavy user you probably use a lot of extra packages. I for one needed the 'sectsty' package and had to install additional ports for that.
-<pre lang="bash">sudo port install texlive-latex-extra</pre>
+<pre lang="bash">sudo port install texlive-latex-extra{% endhighlight %}
 If you are looking for a specific LaTex package but don't know which port it is in grep the <a href="https://trac.macports.org/wiki/TeXLivePackages">list of packages</a>.
 
 After the installation you will be able to compile LaTex documents with the following command:
-<pre lang="bash">xelatex input.tex</pre>
+<pre lang="bash">xelatex input.tex{% endhighlight %}
 The default out put is PDF, so if you want something different, go and check the manual.
 <h3>Gotchas</h3>
 XeTex assumes that you will feed it UTF-8 characters natively so the above-mentioned encoding hacks won't be necessary and will trip up XeTex. Just remove lines like these:
-<pre lang="latex">\usepackage[utf8]{inputenc}</pre>
+<pre lang="latex">\usepackage[utf8]{inputenc}{% endhighlight %}

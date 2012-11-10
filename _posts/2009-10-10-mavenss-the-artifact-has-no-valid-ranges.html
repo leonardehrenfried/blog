@@ -31,10 +31,10 @@ This took me a little while to figure out myself since the error kinda suggests 
 That is a little tricky. You can try running Maven with the -X flag, which will show a running log of how the version is chosen. Also, sometimes the Maven plugin for Eclipse can give you some clues, but sometimes it is way off.
 
 One word of advice though, it seems to matter in which order you include your dependencies in the the POM file. So, if you include a dependency on
-<pre lang="html4strict">super-framework [0.5,1.5)</pre>
+<pre lang="html4strict">super-framework [0.5,1.5){% endhighlight %}
 it will fetch the latest available version, say 1.1.
 
 If you then have a transitive dependency further down that includes
-<pre lang="html4strict">super-framework [0.5, 1.0)</pre>
+<pre lang="html4strict">super-framework [0.5, 1.0){% endhighlight %}
 
 Maven will generate this misleading error, since it will not select anything other than the 1.1 it already has, even though it could just select 0.9 without producing a version conflict. If you swap the order, weirdly, it works.

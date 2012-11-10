@@ -19,12 +19,12 @@ First install wireshark. I'm using macports so for me this was a
 
 <pre lang="bash">
 sudo port install wireshark
-</pre>
+{% endhighlight %}
 
 Then you'll want to listen on a specific interface for traffic. In my case that was <code>en1</code>. You must also tell tshark, the command line version of wireshark, that you're interested in HTTP traffic, but not all the SYN/ACK packets that do the connection handshake with <code>-f "tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)"</code>
 
 <pre>tshark -i en1 \
 -f "tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)" \
--R "ip.addr==46.137.106.50 and http.request.uri contains graph" -V</pre>
+-R "ip.addr==46.137.106.50 and http.request.uri contains graph" -V{% endhighlight %}
 
 In my case I found out later that Safari was sending an <code>Authorization</code> header, which I couldn't see in the Resources tag in Web Inspector.

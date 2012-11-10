@@ -40,7 +40,7 @@ sudo update-alternatives --config ruby
 sudo update-alternatives --config gem
 
 # now try
-ruby --version</pre>
+ruby --version{% endhighlight %}
 If you want to make this your exclusive Ruby and get rid of Ruby 1.8 follow the <a title="Installing Ruby 1.9.2 on Ubuntu 11.10 Oneiric Ocelot without using RVM" href="http://lenni.info/blog/2011/12/installing-ruby-1-9-2-on-ubuntu-11-10-oneric-ocelot-without-using-rvm/#uninstall">uninstallation instructions</a>.
 
 <strong>Edit</strong>: I found out today that there also is a package called <a href="http://packages.ubuntu.com/precise/ruby1.9.3">ruby1.9.3</a> however that is just a proxy package that doesn't have any files itself and only depends on ruby1.9.1. Aptitude confirms this:

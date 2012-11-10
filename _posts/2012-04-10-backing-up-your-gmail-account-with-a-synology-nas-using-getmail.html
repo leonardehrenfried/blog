@@ -22,11 +22,11 @@ I use a Synology NAS at home which has plenty of storage left to keep my roughly
 Login to your NAS as root and install getmail with these commands:
 <pre lang="bash">ipkg update
 ipkg install python
-ipkg install py25-getmail</pre>
+ipkg install py25-getmail{% endhighlight %}
 Now that your have the software in place pick a place where the email should be stored. I chose <code>/volume1/Gmail</code> but any folder that is accessible to your ordinary user will do. Still logged in as root issue these commands:
 <pre lang="bash">mkdir /volume1/Gmail
 cd /volume1/Gmail
-mkdir cur new tmp</pre>
+mkdir cur new tmp{% endhighlight %}
 The last one is necessary for the storage format (Maildir) and getmail doesn't create these folders itself. Maildir stores each email in a separate file on the disk. If you want another storage format, read the getmail documentation.
 
 Then create a file called <code>/volume1/Gmail/getmailrc</code> with the following content, using your own username and password:
@@ -54,17 +54,17 @@ read_all = false
 
 # do not alter messages
 delivered_to = false
-received = false</pre>
+received = false{% endhighlight %}
 Now everything is in place for getmail to do its work. Do a test run with the following command to test if it will run into any problems.
 {%highlight bash%}getmail --getmaildir=/volume1/Gmail{%endhighlight%}
 This will start downloading your messages but depending on the size of your email history will take up to a few hours. There is the distinct probability that your ssh connection will time out and drop due to your inactivity. That's why I ran the first go with nohup so that me logging out wouldn't stop the process.
-<pre lang="bash">nohup getmail -q --getmaildir=/volume1/Gmail & > /volume1/Gmail/nohup.out</pre>
+<pre lang="bash">nohup getmail -q --getmaildir=/volume1/Gmail & > /volume1/Gmail/nohup.out{% endhighlight %}
 <h3>Cron</h3>
 Lastly, we obviously want to run getmail periodically and fetch the newest message so open up <code>/etc/crontab</code> with a text editor like vim (you probably need to install it with ipgk first) and add the following line:
-<pre lang="bash">0       3       *       *       3       root    /bin/su -c "/opt/bin/getmail -q --getmaildir=/volume1/Gmail" admin</pre>
+<pre lang="bash">0       3       *       *       3       root    /bin/su -c "/opt/bin/getmail -q --getmaildir=/volume1/Gmail" admin{% endhighlight %}
 (It is important so separate the individual parts of the crontab with a tab not a space as otherwise the Synology will delete your entry when you reboot.)
 
 This will run getmail every Wednesday at 3AM when you're sound asleep. The <code>/bin/su</code> complication is necessary because it appears that the Synology cron can't run jobs as non-root.
 
 Also, on my Synology you have to restart the cron daemon for it to pick up the changes with a
-<pre lang="bash">synoservice --restart crond</pre>
+<pre lang="bash">synoservice --restart crond{% endhighlight %}
