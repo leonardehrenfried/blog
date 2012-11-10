@@ -17,8 +17,7 @@ meta:
 Today I wanted to write a functional test for a Play 1.2.4 app that required the request to come with a preinitialised Play session. At first I thought that this would be easy, however it turned out that there isn't a ready-made solution for this built in so I had to cobble together the pieces myself.
 
 Here is the method which I have put in the base class for all my FunctionalTests:
-
-<pre lang="java">
+{% highlight java %}
 Http.Request sessionedRequest(Map<String, Object> data) throws Throwable{
     // mostly copied from https://github.com/playframework/play/blob/master/framework/src/play/mvc/Scope.java#L255
     StringBuilder session = new StringBuilder();
@@ -39,4 +38,4 @@ Http.Request sessionedRequest(Map<String, Object> data) throws Throwable{
     req.cookies = ImmutableMap.of(cookieName, cookie);
     return req;
 }
-</pre>
+{% endhighlight %}

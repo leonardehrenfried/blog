@@ -163,11 +163,13 @@ address {
 pre {
   white-space:pre;
   margin:1.5em 0;
-}
-
-pre,code,tt {
-  font:1em 'andale mono', 'lucida console', monospace;
+  font: 11px 'andale mono', 'lucida console', monospace;
   line-height:1.5;
+  background: #272822;
+  color: #f8f8f2;
+  padding: 10px;
+  overflow: scroll;
+  border-radius: 5px;
 }
 
 ul,ol {
