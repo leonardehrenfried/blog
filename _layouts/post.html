@@ -4,7 +4,8 @@ layout: layout
 
 <div class="content">
   <div id="post">
-    <h1>{{ post.title }}</h1>
+    <h2 class="entry-title">{{ page.title }}</h2>
+    <p class="date">{{ page.date | date: "%d %B, %Y" }}</p>
     {{ content }}
   </div>
 </div>

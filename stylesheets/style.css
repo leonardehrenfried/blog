@@ -311,10 +311,10 @@ nav ul li a:visited {
   text-align:left;
 }
 
-.post .date,
+.date,
 .comments .commentlist .commentmetadata{
   font-weight:700;
-  font-family:helvetica, verdana, arial, sans-serif;
+  font-family: helvetica, verdana, arial, sans-serif;
   text-transform:uppercase;
   font-size:11px;
   text-align:center;
