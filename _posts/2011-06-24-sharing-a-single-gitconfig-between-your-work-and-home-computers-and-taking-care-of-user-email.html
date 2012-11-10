@@ -21,12 +21,12 @@ Well, this works pretty good until you realise that there are <em>some</em> conf
 Git does not allow you to to include other configuration files in your <code>.gitconfig</code> but you can use the environment variable <code>$EMAIL</code> in order to overwrite <code>user.email</code>.
 
 What I have done is to add the following to my <code>.bashrc</code> (which is also in the dotfiles repo):
-<pre lang="bash">if [ -f .host-specific.sh ]
+{% highlight bash %}if [ -f .host-specific.sh ]
 then
     source .host-specific.sh
 fi{% endhighlight %}
 This loads a host-specific bash file (if it exists). In this file you'll stick your email address like this:
-<pre lang="bash">export EMAIL=lenni@work.com{% endhighlight %}
+{% highlight bash %}export EMAIL=lenni@work.com{% endhighlight %}
 (Obviously this file needs to be recreated on each host and can't be shared across computers through the dotfile repository.)
 
 Now you can safely share your <code>.gitconfig</code> between the two computers without having to worry about the email settings.

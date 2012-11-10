@@ -21,13 +21,13 @@ Paperclip seems to have the limitation that it only allows one attachment per mo
 You will have to install an image processor. This is described in many other <a href="http://significantbits.wordpress.com/2007/04/06/using-attachment_fu-by-techno-weenie-to-add-image-attachment-support-to-your-rails-application/">blog posts</a> so I won't regurgitate it here. I personally went with ImageMagick and rmagick. Seems to work fine.
 
 Once you've done that you obviously have to install the plugin itself with:
-<pre lang="bash">./script/plugin install http://github.com/technoweenie/attachment_fu.git{% endhighlight %}
+{% highlight bash %}./script/plugin install http://github.com/technoweenie/attachment_fu.git{% endhighlight %}
 <strong>Edit:</strong> Rails 3 has been released shortly after I wrote this post and this plugin doesn't work anymore. However there is an alternative branch on Github, which you can install with:
 
 Be warned though that you can't
 <h3>Setting up the models</h3>
 You will need to use a separate model to store all the attachment meta data. I have called mine Photo but that name is arbitrary - call it what you want. So, lets build a migration:
-<pre lang="ruby">class AddPhotos > ActiveRecord::Migration
+{% highlight ruby %}class AddPhotos > ActiveRecord::Migration
     def self.up
         create_table :photos do |t|
           t.column :parent_id,  :integer
@@ -46,7 +46,7 @@ You will need to use a separate model to store all the attachment meta data. I h
       end
 end{% endhighlight %}
 Here's the model class. Also, read up on the official docu about the all the possible options - the plugin is really quite flexible.
-<pre lang="ruby">class Photo > ActiveRecord::Base
+{% highlight ruby %}class Photo > ActiveRecord::Base
 
   has_attachment :content_type => :image,
                  :storage => :file_system,
@@ -64,7 +64,7 @@ A lot of tutorials say that you should set up your own controller for the image 
 First, you need to slightly edit the form where you want to upload the image from. It needs to be a multipart form and you need to add a file field.
 
 With the <code>file_field_tag</code> part you are telling Rails that it should not put the photo attachment in the main form object but rather create a second hash called <code>photo</code>. In the controller we will be reading out exactly this hash and store it in the photo model. So, here is the controller code:
-<pre lang="ruby">class ArticlesController < ApplicationController   
+{% highlight ruby %}class ArticlesController < ApplicationController   
 
 	def update     @article = Article.find(params[:id])     
 		respond_to do |format|       

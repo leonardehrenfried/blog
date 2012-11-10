@@ -40,7 +40,7 @@ Yes, there is a bewildering array of JS build tools (Jake, Cake, Yeoman, Buildr,
 Frankly, this is like magic. What this enables you to do is to hit save in your favourite text editor and have this automatically trigger a refresh of the page you are working on. And all of that without even installing a browser extension. The way this works is by injecting a little snippet of JavaScript into the page which in turn opens a Websocket connection to the development server which watches for changes on the file system.
 
 Here is an example <code>grunt.js</code> file to achieve this:
-<pre lang="javascript">
+{% highlight javascript %}
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -94,9 +94,9 @@ Fontello is a fantastic app with has taken the pain away from using icon fonts. 
 If you suggest this in your team, your designer will love you since this frees her/him up to do actual design rather than spitting out PNG after PNG for your icons. Plus you can style your icons with CSS and you have a lot less HTTP requests during page load.
 <h4>JSON formatting</h4>
 <a href="http://stedolan.github.com/jq/">jq</a> is pretty nice tool for querying a JSON document but if all you need is a pretty printer you can pipe your JSON through a built in python module with the following one-liner:
-<pre lang="bash">echo '{"foo": "lorem", "bar": "ipsum"}' | python -mjson.tool{% endhighlight %}
+{% highlight bash %}echo '{"foo": "lorem", "bar": "ipsum"}' | python -mjson.tool{% endhighlight %}
 I have this aliased in to jsonpretty with a
-<pre lang="bash">alias jsonpretty='python -mjson.tool'{% endhighlight %}
+{% highlight bash %}alias jsonpretty='python -mjson.tool'{% endhighlight %}
 <h4><a href="http://betterthangrep.com/">ack</a> - better than grep</h4>
 If the project-wide full text search of $FAVOURITE_IDE sucks, and lets be honest they all do, and grep is just a little too awkward to use then take a look at ack. It has changed the way I explore and navigate source trees.
 
@@ -107,6 +107,6 @@ Ack is designed to search through large source code trees, searches recursively 
 Even though it is currently still in alpha state, I'm using version 2.0 for a couple of months now without any issues. Ack 2 removes the limitation of having to keep a whitelist of files to be searched and includes all text files by default. Another thing which wasn't possible in ack 1 but is in 2 is including file names without dots (i.e. <code>Gemfile</code>).
 
 If you want to install ack 2.0 alpha through homebrew, I have prepared a recipe for you. Just do a
-<pre lang="bash">brew install https://raw.github.com/lenniboy/ack2-compiled/master/ack2.rb{% endhighlight %}
+{% highlight bash %}brew install https://raw.github.com/lenniboy/ack2-compiled/master/ack2.rb{% endhighlight %}
 
 Refiddle & rubular

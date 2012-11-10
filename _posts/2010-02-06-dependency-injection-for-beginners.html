@@ -23,7 +23,7 @@ Some authors strangely claim that DI is the same thing as IoC. I however think t
 When you start to build big systems you naturally tend to modularise. Lets take online shopping as an example. You have one module of your code handling the user input for an order and validating form fields; lets call this module the <code>OrderHandler</code>. Then you have another module, which opens a connection to your payment provider and checks that the credit card data the user just gave are actually kosher and the payment can go ahead. We call this module the <code>CreditCardPaymentService</code>.
 
 So, when the OrderHandler has validated all the form fields it passes the data over to the <code>CreditCardPaymentService</code>. But before it can do that it needs to have or create an instance of the <code>CreditCardPaymentService</code>. In (pseudo-) code this would probably look something like this:
-<pre lang="python">class OrderHandler:
+{% highlight python %}class OrderHandler:
    this.payment_service = new CreditCardPaymentService()
    handle_request(request):
      # do something to validate the user input...
@@ -39,7 +39,7 @@ Now, your boss has decided your going to switch from your old credit card provid
 What if all the different modules of your shopping website, instead of creating new instances of <code>PaymentProviders,</code> would instead be given (or <em>injected</em>) those modules?
 
 Maybe we could rewrite the above code like this:
-<pre lang="python">class OrderHandler:
+{% highlight python %}class OrderHandler:
 
  this.payment_service=None
 
@@ -56,7 +56,7 @@ Maybe we could rewrite the above code like this:
         return new HttpResponse("Payment declined"){% endhighlight %}
 Obviously now it is easy to exchange on payment provider with another one. The downside of this that you have to pre-configure the <code>OrderHandler</code> with some type of <code>PaymentProvider</code>. Most DI frameworks do this using Factories and assign each configured, ready-to-use object a string. A factory is supplied with some configuration file that defines those objects and their dependencies.
 Those config files could look like this:
-<pre lang="css">/* objects.conf */
+{% highlight css %}/* objects.conf */
 #cc_order_handler{
   class: OrderHandler
   payment_service: CreditCardPaymentService
@@ -67,7 +67,7 @@ Those config files could look like this:
   payment_service: PaypalPaymentService
 }{% endhighlight %}
 We now have a central piece of code that handles each module's dependencies. It basically instantiates the OrderHandler, sets the right payment service and then gives this object to whoever wants to use it. If we wanted to fetch on of the order handlers we would do it like this.
-<pre lang="python">factory = new ObjectFactory("objects.conf")
+{% highlight python %}factory = new ObjectFactory("objects.conf")
 paypal_payment_handler = factory.getObject("paypal_order_handler"){% endhighlight %}
 What you have done now is to externalise the configuration process of  the <code>Handler</code> from inside it to the factory with calls the set_payment_provider method before it returns it to whoever is requesting the object.
 
