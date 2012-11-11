@@ -3,16 +3,26 @@ layout: layout
 ---
 
 <div class="content">
+
+  <div class="hr"></div>
+
   <article>
     <h2 class="entry-title">{{ page.title }}</h2>
     <p class="date">{{ page.date | date: "%d %B, %Y" }}</p>
     {{ content }}
   </article>
+
+  <div class="hr"></div>
+
   <div id="disqus_thread"></div>
   <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
           var disqus_shortname = 'lenni-info-shizzle'; // required: replace example with your forum shortname
           var disqus_identifier = $("meta[name=disqus-identifier]").attr("content");
+          var disqus_developer = 1;
+          if(console){
+            console.log(disqus_identifier)
+          }
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {
               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

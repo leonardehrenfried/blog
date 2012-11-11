@@ -227,11 +227,13 @@ caption {
   float: left;
 }
 
-#frame {
-  width:500px;
-  padding-top:50px;
-  margin:0 auto;
-  display: relative;
+@media(min-width: 480px) {
+  #frame {
+    width:500px;
+    padding-top:50px;
+    margin: 0 auto;
+    display: relative;
+  }
 }
 
 nav{
@@ -322,9 +324,11 @@ article p.caption {
 }
 
 article img{
-  max-width: 500px;
+  max-width: 490px;
   margin: auto;
   display:block;
+  border: 5px solid silver;
+  border-radius: 5px;
 }
 
 .date,
@@ -477,7 +481,7 @@ article pre{
 }
 
 .hr {
-  background-image:url('images/hrule.png');
+  background-image:url('/images/hrule.png');
   height:29px;
   width:500px;
   background-repeat:no-repeat;

@@ -19,7 +19,9 @@ If you can't stand the default look of Bootstrap anymore go and check out this n
 
 #### [Bootstrap Form Builder][2]
 
-<img title="Bootstrap Form Builder" src="https://lh6.googleusercontent.com/-Od5fO3TehO4/UJgTx4eGJUI/AAAAAAAAIQo/Z4zslSr1aOw/s481/Screen%2520Shot%25202012-11-05%2520at%252020.29.45.png" alt="" width="481" height="354" /> Bootstrap Form Builder in action[/ If you're building a lot of forms with Bootstrap, you probably want to check out this little app. It gives you a nice UI for building them.
+<img title="Bootstrap Form Builder" src="https://lh6.googleusercontent.com/-Od5fO3TehO4/UJgTx4eGJUI/AAAAAAAAIQo/Z4zslSr1aOw/s481/Screen%2520Shot%25202012-11-05%2520at%252020.29.45.png" alt="" width="481" height="354" />
+
+If you're building a lot of forms with Bootstrap, you probably want to check out this little app. It gives you a nice UI for building them.
 #### [Bootsnipp][3]
 If it isn't forms specifically you're building, Bootsnipp gives you small snippets of readymade Bootstrap components and examples of what you could build with Bootstrap.
 
