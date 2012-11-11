@@ -322,6 +322,8 @@ article p.caption {
 }
 
 article img{
+  max-width: 500px;
+  margin: auto;
   display:block;
 }
 
