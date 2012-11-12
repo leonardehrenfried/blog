@@ -2,7 +2,6 @@
 layout: layout
 title: Leonard Ehrenfried's notebook
 ---
-{{site.posts}}
 {% for post in site.posts limit:5 %}
   <div class="hr"></div>
   <article>
@@ -15,11 +14,12 @@ title: Leonard Ehrenfried's notebook
   </article>
 {% endfor %}
 
-<hr />
+
+<div class="hr"></div>
 
 <h2>Archive</h2>
 <ul id="archive">
 {% for post in site.posts %}
-<li><a href="{{ post.url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string }}</abbr></li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string }}</abbr></li>
 {% endfor %}
 </ul>
