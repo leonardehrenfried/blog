@@ -24,7 +24,11 @@ In Maven2 this worked out of the box without extra configuration.
 
 In Maven3 this threw the following error during <code>site-deploy</code>:
 
-<code>[ERROR] Failed to execute goal org.apache.maven.plugins:maven-site-plugin:2.2:deploy (default-cli) on project $PROJECT_NAME: Unsupported protocol: 'scp': Cannot find wagon which supports the requested protocol: scp: java.util.NoSuchElementException</code>
+    [ERROR] Failed to execute goal org.apache.maven.plugins:maven-site-plugin:2.2:deploy
+    (default-cli) on project $PROJECT_NAME: Unsupported protocol: 'scp':
+    Cannot find wagon which supports the requested protocol:
+    scp: java.util.NoSuchElementException
+
 
 The trouble was that the Site Plugin apparently doesn't automatically pull the Apache Wagon SSH implementation. You have to tell it manually to do that like this:
 {% highlight xml %}

@@ -19,10 +19,9 @@ It works only in Germany and will find the nearest cash point for Cash Group, wh
 
 So, without further ado:
 
-[caption id="" align="aligncenter" width="320" caption="Screenshot"]<img title="Screenshot" src="https://lh6.googleusercontent.com/-vagzuzd5WSE/TxhB36YqI6I/AAAAAAAAAFM/8grWWMWqvJE/w333-h500-k/cashgroupfinder.jpg" alt="" width="320" height="480" />[/caption]
-<h3>App Store links</h3>
-<ul>
-	<li><a href="http://itunes.apple.com/us/app/cash-group-finder/id492498061?mt=8">English</a></li>
-	<li><a href="http://itunes.apple.com/de/app/cash-group-finder/id492498061?mt=8">German</a></li>
-</ul>
-&nbsp;
+<img title="Screenshot" src="https://lh6.googleusercontent.com/-vagzuzd5WSE/TxhB36YqI6I/AAAAAAAAAFM/8grWWMWqvJE/w333-h500-k/cashgroupfinder.jpg" alt="" width="320" height="480" />
+
+###App Store links
+
+  - <a href="http://itunes.apple.com/us/app/cash-group-finder/id492498061?mt=8">English</a>
+  - <a href="http://itunes.apple.com/de/app/cash-group-finder/id492498061?mt=8">German</a>
