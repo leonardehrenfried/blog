@@ -243,7 +243,7 @@ caption {
     padding: 15px;
   }
 
-  #frame img, .hr{
+  #frame img{
     max-width: 90%;
   }
 }
@@ -361,37 +361,15 @@ article blockquote {
 
 article .meta {
   width:500px;
-  font-family:helvetica, verdana, arial, sans-serif;
+  font-family: helvetica, verdana, arial, sans-serif;
   font-size:11px;
   padding-top:10px;
-}
-
-article .meta .notes a {
-  color:#aaa;
-  padding-left:16px;
-  background-image:url('http://static.tumblr.com/fw3zutj/YuJl22f39/notes.gif');
-  background-repeat:no-repeat;
-  text-decoration:none;
-  height:18px;
-  display:inline-block;
-  font-weight:700;
 }
 
 article .meta .permalink {
   float:right;
   display:inline-block;
   position:relative;
-}
-
-article .meta .permalink a {
-  color:#aaa;
-  height:18px;
-  text-indent:-999px;
-  width:16px;
-  display:inline-block;
-  background-image:url('http://static.tumblr.com/fw3zutj/jCxl22f2u/link.gif');
-  background-repeat:no-repeat;
-  background-position:right center;
 }
 
 article .meta .tags {
@@ -430,6 +408,14 @@ article .meta .tags {
 
 article pre{
   overflow-y:auto;
+}
+
+.hr {
+  background-image:url('/images/hrule.png');
+  height:29px;
+  width: 100%;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
 .sticky{
