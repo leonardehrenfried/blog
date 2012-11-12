@@ -19,7 +19,7 @@ If you can't stand the default look of Bootstrap anymore go and check out this n
 
 #### [Bootstrap Form Builder][2]
 
-<img title="Bootstrap Form Builder" src="https://lh6.googleusercontent.com/-Od5fO3TehO4/UJgTx4eGJUI/AAAAAAAAIQo/Z4zslSr1aOw/s481/Screen%2520Shot%25202012-11-05%2520at%252020.29.45.png" alt="" width="481" height="354" />
+![Bootstrap Form Builder](https://lh6.googleusercontent.com/-Od5fO3TehO4/UJgTx4eGJUI/AAAAAAAAIQo/Z4zslSr1aOw/s481/Screen%2520Shot%25202012-11-05%2520at%252020.29.45.png)
 
 If you're building a lot of forms with Bootstrap, you probably want to check out this little app. It gives you a nice UI for building them.
 #### [Bootsnipp][3]
@@ -79,7 +79,7 @@ If you don't need the whole live reload setup or are maybe using a web framework
 
 ![Alt](https://lh5.googleusercontent.com/-_Whl1sZppio/UJgbghpKQwI/AAAAAAAAIRA/h-aeCDdn3-w/s674/Screen%2520Shot%25202012-11-05%2520at%252021.02.27.png)
 
-Abusing a keyworded saved search in Chrome In order to do this, create a new search, paste the bookmarklet Javascript URL into the URL field, give it a name and a one letter keyword (I have given it the letter 'r'). Now you can jump to the URL bar withÂ âŒ˜ + L, then type R and hit enter and voila, your CSS is reloaded without you having to refresh the entire page.
+Abusing a keyworded saved search in Chrome In order to do this, create a new search, paste the bookmarklet Javascript URL into the URL field, give it a name and a one letter keyword (I have given it the letter 'r'). Now you can jump to the URL bar with ⌘ + L, then type R and hit enter and voila, your CSS is reloaded without you having to refresh the entire page.
 
 #### [cdnjs][8]
 This free, community-curated CDN hosts Javascript libraries like Backbone, moment.js and various popular jQuery plugins. Using this has the double advantage of not polluting your source tree with third-party libraries as well as speeding up your page load by spreading the load onto multiple servers. An added bonus: They support SPDY for extra-parallel download for enabled browsers. You can also add a library you need to the CDN by submitting a pull request.
