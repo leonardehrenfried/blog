@@ -227,15 +227,26 @@ caption {
   float: left;
 }
 
+#frame {
+  padding-top:50px;
+}
 @media(min-width: 480px) {
   #frame {
     width:500px;
-    padding-top:50px;
     margin:0 auto;
     display: relative;
   }
 }
 
+@media(max-width: 481px) {
+  #frame {
+    padding: 15px;
+  }
+
+  #frame img, .hr{
+    max-width: 100%;
+  }
+}
 nav{
   margin: 0 0 1.5em;
   float:left;
@@ -485,6 +496,7 @@ article pre{
   height:29px;
   width:500px;
   background-repeat:no-repeat;
+  background-position:center;
 }
 
 #pagination {
