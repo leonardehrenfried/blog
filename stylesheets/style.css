@@ -231,7 +231,7 @@ caption {
   #frame {
     width:500px;
     padding-top:50px;
-    margin: 0 auto;
+    margin:0 auto;
     display: relative;
   }
 }
@@ -297,7 +297,7 @@ article h2 {
   margin-bottom:6px;
 }
 
-article h2 a {
+article h2 a, article h2 a:visited {
   color:#000;
   text-decoration:none;
 }
