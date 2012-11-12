@@ -244,7 +244,7 @@ caption {
   }
 
   #frame img, .hr{
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 nav{
@@ -338,8 +338,9 @@ article img{
   max-width: 490px;
   margin: auto;
   display:block;
-  border: 5px solid silver;
+  border: 5px solid #eee;
   border-radius: 5px;
+
 }
 
 .date,
@@ -431,79 +432,7 @@ article pre{
   overflow-y:auto;
 }
 
-.wp-caption p.wp-caption-text,
-.gallery-caption {
-  font-family:'Georgia','Times','Times New Roman',serif;
-  text-align: center;
-}
-
 .sticky{
-}
-
-/*
- * Comments
- */
-
-.comments ol{
-  padding:0;
-  margin:0;
-  list-style-type:none;
-}
-
-.comments ol li{
-  list-style-type:none;
-}
-
-.comment-body{
-  margin: 0 0 3em;
-}
-
-.comments #respond{
-  position:relative;
-}
-
-.comments #respond textarea{
-  width: 100%;
-}
-
-.comments #respond .form-allowed-tags{
-   display:none;
-}
-
-.comments .commentlist .comment-author,
-.wp-caption p{
-  font-family:'Georgia','Times','Times New Roman',serif;
-}
-
-.comments .comment-meta a{
-  text-decoration:none;
-  color:#999;
-}
-
-.comments .bypostauthor{
-
-}
-
-.comments form#commentform input#author,
-.comments form#commentform input#url,
-.comments form#commentform input#email{
-  position:absolute;
-  left:60px;
-}
-
-.hr {
-  background-image:url('/images/hrule.png');
-  height:29px;
-  width:500px;
-  background-repeat:no-repeat;
-  background-position:center;
-}
-
-#pagination {
-  width:500px;
-  height:30px;
-  margin-top:10px;
-  font-family:helvetica, verdana, arial, sans-serif;
 }
 
 #pagination #older {
