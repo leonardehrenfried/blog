@@ -117,8 +117,9 @@ h6 {
   font-weight:700;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+h1 a, h2 a:link, h2 a:visited, h3 a, h4 a, h5 a, h6 a{
   text-decoration: none;
+  color: #000;
 }
 
 a:link {
@@ -149,6 +150,10 @@ abbr,acronym {
   border-bottom:1px dotted #666;
 }
 
+#archive abbr{
+  margin-left: 10px;
+  border: none;
+}
 address {
   font-style:italic;
   margin:0 0 1.5em;
@@ -306,13 +311,8 @@ article h2 {
   margin-bottom:6px;
 }
 
-article h2 a, article h2 a:visited {
-  color:#000;
-  text-decoration:none;
-}
-
 article h2 a:hover {
-  opacity:0.8px;
+  opacity: 0.8;
 }
 
 article p, article ul, article ol, .comments ol {
