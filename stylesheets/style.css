@@ -178,6 +178,7 @@ pre code{
   font-size: 12px;
   background: none;
   border: none;
+  padding: 0;
 }
 
 pre{
@@ -409,7 +410,7 @@ article pre{
 }
 
 .hr {
-  background-image:url('/images/hrule.png');
+  background-image:url('/blog/images/hrule.png');
   height:29px;
   width: 100%;
   background-repeat:no-repeat;

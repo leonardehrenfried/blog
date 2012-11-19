@@ -20,8 +20,7 @@ However, as I have elaborated in a <a title="Installing Ruby 1.9.2 on Ubuntu 11.
 The short version is: You can get Ruby 1.9.3-p0 by installing the <code>ruby-1.9.1</code> package. (The package is called 1.9.1 because that is the ABI version.)
 
 If you want to make Ruby 1.9 the default do the following:
-{% highlight bash %}
-sudo apt-get update
+{% highlight bash %}sudo apt-get update
 
 sudo apt-get install ruby1.9.1 ruby1.9.1-dev \
   rubygems1.9.1 irb1.9.1 ri1.9.1 rdoc1.9.1 \
