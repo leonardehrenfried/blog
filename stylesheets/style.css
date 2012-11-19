@@ -117,20 +117,6 @@ h6 {
   font-weight:700;
 }
 
-p img.left {
-  display:inline;
-  float:left;
-  margin:1.5em 1.5em 1.5em 0;
-  padding:0;
-}
-
-p img.right {
-  display:inline;
-  float:right;
-  margin:1.5em 0 1.5em 1.5em;
-  padding:0;
-}
-
 a:link {
   color: #2A2A2A;
   text-decoration:underline;
@@ -165,13 +151,26 @@ address {
 }
 
 code, pre{
-  white-space:pre;
-  font-family: 'andale mono', 'lucida console', monospace;
+  white-space: pre;
+  font-family: 'Source Code Pro', 'andale mono', 'lucida console', monospace;
   font-size: 13px;
 }
+
+code{
+  margin: 0 1px;
+  padding: 0px 3px;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
 pre code{
   font-size: 12px;
+  background: none;
+  border: none;
 }
+
 pre{
   margin:1.5em 0;
   line-height:1.5;
@@ -215,21 +214,14 @@ caption {
   background:#eee;
 }
 
-.loud {
-  color:#111;
-}
-
-.alignright {
-  float: right;
-}
-
-.alignleft {
-  float: left;
-}
+/*
+ * Main container
+ */
 
 #frame {
   padding-top:50px;
 }
+
 @media(min-width: 480px) {
   #frame {
     width:500px;
@@ -247,6 +239,7 @@ caption {
     max-width: 90%;
   }
 }
+
 nav{
   margin: 0 0 1.5em;
   float:left;
@@ -282,6 +275,7 @@ nav ul li a:visited {
   color:#2A2A2A;
   text-decoration:none;
 }
+
 .title {
   padding-bottom:18px;
 }
@@ -319,13 +313,13 @@ article h2 a:hover {
 
 article p, article ul, article ol, .comments ol {
   text-align:justify;
-  font-family:helvetica, verdana, arial, sans-serif;
+  font-family: Helvetica, verdana, arial, sans-serif;
   text-justify:newspaper;
 }
 
 article p.caption {
   font-weight:700;
-  font-family:helvetica, verdana, arial, sans-serif;
+  font-family: Helvetica, verdana, arial, sans-serif;
   font-size:11px;
   text-indent:0;
   padding-top:5px;
@@ -416,9 +410,6 @@ article pre{
   width: 100%;
   background-repeat:no-repeat;
   background-position:center;
-}
-
-.sticky{
 }
 
 #pagination #older {
