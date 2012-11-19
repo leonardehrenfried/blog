@@ -2,4 +2,5 @@ pygments:   true
 markdown:   rdiscount
 permalink:  /:year/:month/:title
 baseurl:    /blog/
+url:        http://lenni.info/blog
 rdiscount extensions: [smart]
