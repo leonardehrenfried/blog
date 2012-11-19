@@ -32,7 +32,7 @@ Are you tired of re-adding Bootstrap to your repositories over and over or using
 
 #### Grunt
 
-![Alt text](https://lh6.googleusercontent.com/-rC0dC5mG4Pk/UJgVyx8ORJI/AAAAAAAAIQw/Q4M0-N92Q08/s512/logo.png)
+![Alt text](https://lh6.googleusercontent.com/-rC0dC5mG4Pk/UJgVyx8ORJI/AAAAAAAAIQw/Q4M0-N92Q08/s288/logo.png)
 
 One of my more recent discoveries is a JavaScript build tool called [grunt][5]. Even though I guess you could use it to build node modules, it is really meant for frontend coding tasks. If you've ever written your own scripts to glue together jshint, uglify, file concatenation and rsync and wondered if there is a better way, grunt can help you. It is ideal not only for those things but has plugins for virtually everything like:
 

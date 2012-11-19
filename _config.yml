@@ -2,4 +2,5 @@ auto:       true
 pygments:   true
 markdown:   rdiscount
 permalink:  /blog/:year/:month/:title
+baseurl:    /blog/
 rdiscount extensions: [smart]
