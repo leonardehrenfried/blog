@@ -20,13 +20,16 @@ The problem however is, that some of the work I do is in pull requests to other 
 
 So, in order to show off the pull requests I have done, I coded up a little widget (needs jQuery) which pulls the information out of the API and displays it. So, without much further ado, here it is.
 
-<script src="http://lenni.info/pull-request-widget/pull-request-widget.js" async></script></p>
+<script src="http://lenni.info/pull-request-widget/pull-request-widget.js"></script>
 <link rel="stylesheet" href="http://lenni.info/pull-request-widget/pull-request-widget.css"/>
+
 <div id="pull-requests" data-github-user="lenniboy"></div>
-<script type="text/javascript">// <![CDATA[
+
+<script type="text/javascript">
 jQuery(document).ready(function(){
   jQuery("#pull-requests").pullRequests();
 });
-// ]]></script>
+</script>
 
-If you want to know how to use it yourself, check out the "<a href="http://lenni.info/pull-request-widget/">marketing website</a>", which has instructions about adding it to your website.
+
+If you want to know how to use it yourself, check out the "[marketing website](http://lenni.info/pull-request-widget)", which has instructions about adding it to your website.
