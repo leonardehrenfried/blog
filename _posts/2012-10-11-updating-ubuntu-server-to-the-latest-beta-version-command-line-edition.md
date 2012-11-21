@@ -16,9 +16,8 @@ I keep forgetting this, so I'm going to write it down.
 
 Ubuntu can pick up the latest development version with a
 
-{% highlight bash %}sudo do-release-upgrade -d # -d means development version{% endhighlight %}
+    sudo do-release-upgrade -d # -d means development version
 
-But that seems to not pick up any pre-release versions if it isn't configured correctly. You must change the file <code>/etc/update-manager/release-upgrades</code> and set 
-{% highlight bash %}
-Prompt=normal
-{% endhighlight %}
+But that seems to not pick up any pre-release versions if it isn't configured correctly. You must change the file `/etc/update-manager/release-upgrades` and set
+
+    Prompt=normal
