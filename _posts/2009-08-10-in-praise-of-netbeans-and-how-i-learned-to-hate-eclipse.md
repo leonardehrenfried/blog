@@ -24,7 +24,7 @@ I use a MacBook for my development and until recently I have done my Java develo
 
 ### The conversion
 
-One day I was frustrated enough by how rubbish Eclipse was, that I was ready to switch IDE mid-project. I kept saying to myself that I would give Netbeans a spin at the next project but my patience with Eclipse was wearing thin. I have not looked back. The main issue I was worried about was the project conversion process and I have to tell you it was the most seamless thing I have ever experienced. Absolutely *no errors or incompatibilities* turned up. I was impressed. It also turned out that Netbeans is much better at managing your classpath automatically, so conversion even resolved a few issues.Â The only thing I had to redo was the tomcat configuration but that took about 30 mins.
+One day I was frustrated enough by how rubbish Eclipse was, that I was ready to switch IDE mid-project. I kept saying to myself that I would give Netbeans a spin at the next project but my patience with Eclipse was wearing thin. I have not looked back. The main issue I was worried about was the project conversion process and I have to tell you it was the most seamless thing I have ever experienced. Absolutely *no errors or incompatibilities* turned up. I was impressed. It also turned out that Netbeans is much better at managing your classpath automatically, so conversion even resolved a few issues. The only thing I had to redo was the tomcat configuration but that took about 30 mins.
 
 ### I didn't know Java development could be bearable on a Mac
 
