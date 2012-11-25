@@ -1,35 +1,17 @@
 ---
 layout: post
-title: Tools for modern web development
+title: Tools for the discerning front end developer
 tags:
 - development
-- Mixed
 - tools
-status: publish
 type: post
-published: false
-meta:
-  _edit_last: '1'
+published: true
 ---
 
 ###Useless preamble
 
 Working as a web developer and doing a lot of frontend work, I have collected a rather nice tool belt (if I may say so) of things that I hope will help boost your productivity.
 
-###Twitter Bootstrap related
-#### [Bootswatch][1]
-If you can't stand the default look of Bootstrap anymore go and check out this nice selection of themes for Bootstrap.
-
-#### [Bootstrap Form Builder][2]
-
-![Bootstrap Form Builder](https://lh6.googleusercontent.com/-Od5fO3TehO4/UJgTx4eGJUI/AAAAAAAAIQo/Z4zslSr1aOw/s481/Screen%2520Shot%25202012-11-05%2520at%252020.29.45.png)
-
-If you're building a lot of forms with Bootstrap, you probably want to check out this little app. It gives you a nice UI for building them.
-#### [Bootsnipp][3]
-If it isn't forms specifically you're building, Bootsnipp gives you small snippets of readymade Bootstrap components and examples of what you could build with Bootstrap.
-
-#### [BootstrapCDN][4]
-Are you tired of re-adding Bootstrap to your repositories over and over or using Github as a static asset server? As the name suggests this free CDN hosts Bootstrap for you. My favourite feature are the hosted versions of Bootswatch.
 
 ### Javascript
 
@@ -84,23 +66,51 @@ Who knew that development could be fun with tools like this?
 
 #### CSS reload bookmarklet
 
-If you don't need the whole live reload setup or are maybe using a web framework which doesn't play nice with grunt you can use Paul Irish's [CSS reload bookmarklet][7]. This simply iterates over all the stylesheets in the document and adds a fake parameter with a timestamp value to their URL causing them to be reloaded. The timestamp also takes care of any caching issues. Chrome doesn't allow bookmarklets to be invoked with a keyboard shortcut but I found the following trick to be able to kinda-simulate a shortcut: You need to bind the bookmarklet to a custom search, which in turn can be triggered by a one-letter keyword.
+If you don't need the whole live reload setup or are maybe using a web framework which doesn't play nice with grunt you can use Paul Irish's [CSS reload bookmarklet][7]. This simply iterates over all the stylesheets in the document and adds a fake parameter with a timestamp value to their URL causing them to be reloaded. The timestamp also takes care of any caching issues.
+
+Chrome doesn't allow bookmarklets to be invoked with a keyboard shortcut but I found the following trick to be able to kinda-simulate a shortcut: You need to bind the bookmarklet to a custom search, which in turn can be triggered by a one-letter keyword.
 
 ![Setting a "shortcut" to a bookmarklet in Chrome by abusing a saved search](https://lh5.googleusercontent.com/-_Whl1sZppio/UJgbghpKQwI/AAAAAAAAIRA/h-aeCDdn3-w/s674/Screen%2520Shot%25202012-11-05%2520at%252021.02.27.png)
 
 In order to do this, create a new search, paste the bookmarklet Javascript URL into the URL field, give it a name and a one letter keyword (I have given it the letter 'r'). Now you can jump to the URL bar with ⌘ + L, then type R and hit enter and voila, your CSS is reloaded without you having to refresh the entire page.
 
 #### [cdnjs][8]
-This free, community-curated CDN hosts Javascript libraries like Backbone, moment.js and various popular jQuery plugins. Using this has the double advantage of not polluting your source tree with third-party libraries as well as speeding up your page load by spreading the load onto multiple servers. An added bonus: They support SPDY for extra-parallel download for enabled browsers. You can also add a library you need to the CDN by submitting a pull request.
+
+This free, community-curated CDN hosts Javascript libraries like Backbone, moment.js and various popular jQuery plugins. Using this has the double advantage of not polluting your source tree with third-party libraries as well as speeding up your page load by spreading the load onto multiple servers.
+
+An added bonus: They support SPDY for extra-parallel download for enabled browsers. You can also add a library you need to the CDN by submitting a pull request. I've done that a few times and Ryan and Thomas have always been quick and _very_ friendly.
+
+###Twitter Bootstrap related
+
+#### [Bootswatch][1]
+
+If you can't stand the default look of Bootstrap anymore go and check out this nice selection of themes for Bootstrap.
+
+#### [Bootstrap Form Builder][2]
+
+![Bootstrap Form Builder](https://lh6.googleusercontent.com/-Od5fO3TehO4/UJgTx4eGJUI/AAAAAAAAIQo/Z4zslSr1aOw/s481/Screen%2520Shot%25202012-11-05%2520at%252020.29.45.png)
+
+If you're building a lot of forms with Bootstrap, you probably want to check out this little app. It gives you a nice UI for building them.
+
+#### [Bootsnipp][3]
+
+If it isn't forms specifically you're building, Bootsnipp gives you small snippets of readymade Bootstrap components and examples of what you could build with Bootstrap.
+
+#### [BootstrapCDN][4]
+
+Are you tired of re-adding Bootstrap's CSS file to your repositories over and over or using Github as a static asset server? As the name suggests this free CDN hosts Bootstrap for you. My favourite feature are the hosted versions of Bootswatch.
 
 ### Misc.
 
 #### [Fontello][9]
-Fontello is a fantastic app with has taken the pain away from using icon fonts. They collected a hand full of very popular icon fonts ([Entypo][10], for example), have given each icon character a simple name and make this all available as single webfont file (in all formats you'll ever need) plus a handy stylesheet. This lets you create icons by simply applying a CSS class to an element, just as it is done in Twitter Bootstrap.
+
+Remember the days when you had to pester your designer for small icon PNGs (most likely in plain as well as mouseover/active variations)? Thank God we have icon fonts now! The only downside is that selecting an icon character and inserting it into your HTML is quite a bit of work and may involve special programs for font managements.
+
+Fontello is a web app that has made it its mission to take away the pain from using icon fonts. They have collected a hand full of very popular icon fonts ([Entypo][10], for example), have given each icon character a simple, descriptive name and make this all available as single webfont file (in all formats you'll ever need) plus a handy stylesheet. This lets you create icons by simply applying a CSS class to an element, just as it is done in Twitter Bootstrap.
 
 ![Fontello](https://lh5.googleusercontent.com/-fj4HRCQhhxQ/UJgkMDywG3I/AAAAAAAAIRU/H5NWQF-UcEA/s229/Screen%2520Shot%25202012-11-05%2520at%252021.39.53.png)
 
-If you suggest this in your team, your designer will love you since this frees her/him up to do actual design rather than spitting out PNG after PNG for your icons. Plus you can style your icons with CSS and you have a lot less HTTP requests during page load.
+If you suggest this in your team, your designer will love you as this frees her/him up to do actual design. Other benefits are that you can style your icons with CSS and have a lot less HTTP requests during page load.
 
 #### JSON formatting
 
