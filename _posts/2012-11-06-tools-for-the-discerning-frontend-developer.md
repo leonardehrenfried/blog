@@ -8,10 +8,9 @@ type: post
 published: true
 ---
 
-###Useless preamble
+###Pro-forma preamble
 
-Working as a web developer and doing a lot of frontend work, I have collected a rather nice tool belt (if I may say so) of things that I hope will help boost your productivity.
-
+Working as a web developer and doing a lot of frontend work, over the years I have collected a rather nice tool belt (if I may say so) of things that make me more productive. Today I'd like to share some of these.
 
 ### Javascript
 
@@ -118,7 +117,7 @@ If you suggest this in your team, your designer will love you as this frees her/
 {% highlight bash %}
 echo '{"foo": "lorem", "bar": "ipsum"}' | python -mjson.tool
 {% endhighlight %}
-I have this aliased in `.profile` to jsonpretty with a
+I have this aliased in my `.profile` to jsonpretty with a
 {% highlight bash %}alias jsonpretty='python -mjson.tool'{% endhighlight %}
 
 #### [ack][12] - better than grep
@@ -132,7 +131,23 @@ Even though it is currently still in alpha state, I'm using version 2.0 for a co
     brew install https://raw.github.com/lenniboy/ack2-compiled/master/ack2.rb
 
 ### Testing regular expressions
-Refiddle & rubular
+To me it was a real eye opener when I discovered visual regex tools. They
+shorten the feedback loop drastically and make reasoning about them a lot
+easier (even though it still often takes a few moments to fully wrap your head
+around what is happening.)
+
+My current favourite for doing that using the JS regex syntax is
+an obscure tool called [Hifi Regex Tester](http://www.gethifi.com/tools/regex).
+Even though it's usability isn't too great(too many colours!) it is the only
+one that I have found which displays match groups.
+
+If you can live without match groups, [refiddle](http://refiddle.com/) feels a
+lot more modern and tidied up.
+
+### Your favourites
+
+If you liked this little list, how about you letting me know about other
+productivity enhancers?
 
  [1]: http://bootswatch.com/
  [2]: http://bootstrap-forms.heroku.com/
