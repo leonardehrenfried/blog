@@ -138,7 +138,7 @@ around what is happening.)
 
 My current favourite for doing that using the JS regex syntax is
 an obscure tool called [Hifi Regex Tester](http://www.gethifi.com/tools/regex).
-Even though it's usability isn't too great(too many colours!) it is the only
+Even though its usability isn't too great (too many colours!) it is the only
 one that I have found which displays match groups.
 
 If you can live without match groups, [refiddle](http://refiddle.com/) feels a
