@@ -248,6 +248,10 @@ caption {
   #frame img{
     max-width: 90%;
   }
+
+  #influads_block{
+    display: none;
+  }
 }
 
 nav{
