@@ -21,3 +21,7 @@ end
 task :server do
   sh "jekyll --auto --server"
 end
+
+task :list do
+  sh "ls -l _posts/|grep html"
+end
