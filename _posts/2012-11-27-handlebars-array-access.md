@@ -18,12 +18,16 @@ The syntax is the following: `{{ "{{ array.[index] " }}}}`
 
 ####An example from an app I'm building right now
 
-    <div class="img-container pull-left">
-     {{ #if imageURLs.length " }}
-        <img src=""{{ imageURLs.[0] " }}"/>
-      {{ else }}
-        <img src="http://placehold.it/130x130" class="img-polaroid">
-      {{ /if }}
-    </div>
+{% highlight  html %}
+{% raw %}
+<div class="img-container pull-left">
+  {{ #if imageURLs.length }}
+    <img src="{{ imageURLs.[0] }}"/>
+  {{ else }}
+    <img src="http://placehold.it/130x130" class="img-polaroid">
+  {{ /if }}
+</div>
+{% endraw %}
+{% endhighlight %}
 
 
