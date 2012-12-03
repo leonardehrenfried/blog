@@ -13,13 +13,12 @@ published: true
 meta:
   _edit_last: '1'
   dsq_thread_id: '756516534'
-  _wp_old_slug: backing-up-your-gmail-account-with-on-a-synology-nas-using-getmail
 ---
 Recently, I had a bit of a data loss scare where I couldn't access my Google Account for a few hours. In the end it turned out to be a well-meaning Google protection mechanism that kicked in because I tried to access my account while on holiday on the Canary Islands. I have heard horror stories of people loosing their email histories stored in Gmail and this little incident got me scared enough to investigate backing up my email history outside of Gmail.
 
 I use a Synology NAS at home which has plenty of storage left to keep my roughly 2GB of email many times over. It has a variant of Linux installed and besides a nice web-based UI it has also the very handy ability to ssh into the box and install additional software through a package manager called ipkg.
 
-###The setup<
+###The setup
 Login to your NAS as root and install getmail with these commands:
 
 {% highlight bash %}ipkg update
