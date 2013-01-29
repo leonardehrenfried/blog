@@ -1,5 +1,5 @@
 pygments:   true
-markdown:   kramdown
+markdown:   redcarpet
 permalink:  /:year/:month/:title
 baseurl:    /blog/
 url:        http://lenni.info/blog

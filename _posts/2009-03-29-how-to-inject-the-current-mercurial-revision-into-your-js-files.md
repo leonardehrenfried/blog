@@ -27,6 +27,7 @@ hg log -l1|grep changeset|grep -o  "\([0-9]\+\):"|grep -o "\([0-9]\+\)"
 ```
 
 In your HTML files you will need a little placeholder that will mark all those places where the current revision number should be injected. I chose the string <code>{REV}</code>. Your HTML header should look like this:
+
 ```html
 <script src="behaviour.js?revision={REV}" type="text/javascript"></script>
 ```
@@ -41,6 +42,7 @@ perl -pi -e 's/{REV}/'$rev'/g' $1
 ```
 
 So put this code in a file, say, replace.sh, make it executable and then run it with something like
+
 ```bash
 ./replace.sh index.html
 ```

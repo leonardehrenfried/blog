@@ -11,13 +11,13 @@ meta:
   dsq_thread_id: '756516104'
 ---
 If you want to make use of Google's hosting platform for all sorts of JavaScript libraries and want to use jQuery in your site, just insert this snippet into the header of your HTML document.
-{% highlight html %}
+```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-{% endhighlight %}
+```
 <a href="http://encosia.com/2008/12/10/3-reasons-why-you-should-let-google-host-jquery-for-you/">This</a> blog post explains why Google hosting is a Good Idea.
 ###Addition
 We have started using Prototype and script.aculo.us at work. Here's Google's URL for it:
-{% highlight html %}
+```html
 <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.1.0/prototype.js" type="text/javascript"></script>
-{% endhighlight %}
-{% highlight html %}<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js" type="text/javascript"></script>{% endhighlight %}
+<script src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js" type="text/javascript"></script>
+```
