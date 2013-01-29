@@ -19,7 +19,7 @@ task :deploy do
 end
 
 task :server do
-  sh "jekyll --auto --server"
+  sh "jekyll serve --baseurl=/blog/"
 end
 
 task :list do
