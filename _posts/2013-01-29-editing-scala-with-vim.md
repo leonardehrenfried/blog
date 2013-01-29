@@ -6,7 +6,7 @@ tags:
 - scala
 - ctags
 type: post
-published: true
+published: false
 ---
 
 `~/.ctags`
