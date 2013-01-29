@@ -14,8 +14,8 @@ in computer science. I did fairly well on my final dissertation and have
 been meaning to publish it for quite some time but never actually came round
 to it.
 
-The reason that publising this popped back into my mind was that last week
-a collegue and I got chatting about a friend of his who is also wanting to
+The reason that publishing this popped back into my mind was that last week
+a colleague and I got chatting about a friend of his who is also wanting to
 write a thesis on natural language processing.
 
 The dissertation is titled _Automatic extraction and categorisation of
