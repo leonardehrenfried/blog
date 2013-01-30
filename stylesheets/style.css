@@ -232,6 +232,12 @@ caption {
   padding-top:50px;
 }
 
+#frame iframe{
+  width: 97%;
+  margin: auto;
+  display: block;
+}
+
 @media(min-width: 480px) {
   #frame {
     width:500px;

@@ -6,7 +6,7 @@ tags:
 - scala
 - ctags
 type: post
-published: true
+published: false
 ---
 
 Even though it quite often hurts my brain a little bit, learning Scala has been
