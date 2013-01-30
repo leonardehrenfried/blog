@@ -30,6 +30,8 @@ I'm already using Vim for everything other than Java so I hunted around the
 web in order to find plugins and work and I've been quite satisfied with the
 following ones.
 
+####[vim-scala]()
+
 ####[neocomplcache](https://github.com/Shougo/neocomplcache)
 
 The built-in Vim autocomplete isn't great for Scala.
