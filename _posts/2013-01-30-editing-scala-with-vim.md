@@ -30,7 +30,8 @@ I'm already using Vim for everything other than Java so I hunted around the
 web in order to find plugins and work and I've been quite satisfied with the
 following ones.
 
-####[vim-scala]()
+####[vim-scala](vim-scala)
+Obviously, you will need syntax highlighting and this plugin provides that.
 
 ####[neocomplcache](https://github.com/Shougo/neocomplcache)
 
