@@ -13,7 +13,7 @@ meta:
 If you want to make use of Google's hosting platform for all sorts of JavaScript libraries and want to use jQuery in your site, just insert this snippet into the header of your HTML document.
 
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 ```
 
 [This](http://encosia.com/2008/12/10/3-reasons-why-you-should-let-google-host-jquery-for-you/)This blog post explains why Google hosting is a Good Idea.
