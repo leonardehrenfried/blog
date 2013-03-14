@@ -2,29 +2,33 @@
 layout: layout
 title: Leonard Ehrenfried's notebook
 ---
-{% for post in site.posts limit:5 %}
+{% for post in paginator.posts %}
   <section>
     <div class="eight columns">
       <h4 class="post_title"><a href=".{{ post.url }}">{{ post.title }}</a></h4>
       <span class="post_date">{{ post.date | date: "%d %B, %Y" }}</span>
       {{ post.content }}
       <p>
-        <a id="more" href=".{{ post.url }}#disqus_thread">Comments &raquo;</a>
+        <a id="more" href="{{site.baseurl}}/{{ post.url }}#disqus_thread">Comments &raquo;</a>
       </p>
     </div>
     <br class="clear">
   </section>
 {% endfor %}
 
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/blog/page{{paginator.previous_page}}" class="previous">
+      <button class="light"><i class="icon-chevron-left"></i></button>
+    </a>
+  {% endif %}
 
-<div class="hr"></div>
+  <span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
 
-<h2>Archive</h2>
-<ul id="archive">
-{% for post in site.posts %}
-  <li>
-    <a href=".{{ post.url }}">{{ post.title }}</a>
-    <abbr>{{ post.date | date_to_string }}</abbr>
-  </li>
-{% endfor %}
-</ul>
+  {% if paginator.next_page %}
+    <a href="/blog/page{{paginator.next_page}}" class="next ">
+      <button class="light"><i class="icon-chevron-right"></i></button>
+    </a>
+  {% endif %}
+</div>
+

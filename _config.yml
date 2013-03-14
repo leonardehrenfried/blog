@@ -4,3 +4,4 @@ permalink:  /:year/:month/:title
 baseurl:    /blog/
 url:        http://lenni.info/blog
 rdiscount extensions: [smart]
+paginate:   5
