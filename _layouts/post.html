@@ -2,19 +2,16 @@
 layout: layout
 ---
 
-<div class="content">
-
-  <div class="hr"></div>
-
-  <article>
-    <h2 class="entry-title">{{ page.title }}</h2>
-    <p class="date">{{ page.date | date: "%d %B, %Y" }}</p>
+<section>
+  <div class="eight columns">
+    <h4 class="post_title">{{ page.title }}</h4>
+    <span class="post_date">{{ page.date | date: "%d %B, %Y" }}</span>
     {{ content }}
-  </article>
 
-  <div class="hr"></div>
+    <div id="disqus_thread"></div>
+  </div>
+  <br class="clear">
 
-  <div id="disqus_thread"></div>
   <script type="text/javascript">
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
           var disqus_shortname = 'lenni-info-shizzle';
@@ -40,4 +37,4 @@ layout: layout
      })();
   </script>
 
-</div>
+</section>

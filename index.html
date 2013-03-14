@@ -3,15 +3,17 @@ layout: layout
 title: Leonard Ehrenfried's notebook
 ---
 {% for post in site.posts limit:5 %}
-  <div class="hr"></div>
-  <article>
-    <h2><a href=".{{ post.url }}">{{ post.title }}</a></h2>
-    <p class="date">{{ post.date | date: "%d %B, %Y" }}</p>
-    {{ post.content }}
-    <p>
-      <a id="more" href=".{{ post.url }}#disqus">Comments &raquo;</a>
-    </p>
-  </article>
+  <section>
+    <div class="eight columns">
+      <h4 class="post_title"><a href=".{{ post.url }}">{{ post.title }}</a></h4>
+      <span class="post_date">{{ post.date | date: "%d %B, %Y" }}</span>
+      {{ post.content }}
+      <p>
+        <a id="more" href=".{{ post.url }}#disqus">Comments &raquo;</a>
+      </p>
+    </div>
+    <br class="clear">
+  </section>
 {% endfor %}
 
 

@@ -4,7 +4,7 @@ USER = "lenni"
 HOST = "lenni.info"
 PATH = "www/#{BASENAME}"
 
-task :default => ["deploy"]
+task :default => ["server"]
 
 desc "Deploys the content of this folder minus the .git directory"
 task :deploy do
@@ -19,7 +19,7 @@ task :deploy do
 end
 
 task :server do
-  sh "jekyll serve --watch --baseurl=/blog/"
+  sh "jekyll --serve --auto"
 end
 
 task :list do
