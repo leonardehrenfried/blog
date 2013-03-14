@@ -1,5 +1,5 @@
 /*==================================================
-    
+
     Template Name: Basic HTML
     Description: Basic is a super simple blogging theme
     Author: Daniel Post
@@ -22,8 +22,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -34,7 +34,7 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -61,7 +61,7 @@ table {
 /* --------------------------------------------------------------
 Basic Styles
 -------------------------------------------------------------- */
-html { 
+html {
     overflow-y: scroll;
 }
 
@@ -86,7 +86,7 @@ img.float_right {
     margin: 10px 0 30px 40px;
 }
 
-li { 
+li {
     list-style: none; /* Remove bullets on lists */
 }
 
@@ -177,7 +177,7 @@ Grid
     .one.column,
     .one-third.column,
     .two-thirds.column
-    { 
+    {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -252,7 +252,7 @@ em      { font-style: italic;}
 strong  { font-weight: bold;}
 .small  { font-size: 80%;}
 .center { text-align: center;}
-.highlight { background: #ff6644; padding: 0 5px; color:  #fff; }
+.highlight-red { background: #ff6644; padding: 0 5px; color:  #fff; }
 
 
 /* --------------------------------------------------------------
@@ -287,7 +287,7 @@ button:hover {
     -webkit-transition:all .25s ease-in-out;
     -moz-transition:all .25s ease-in-out;
     -o-transition:all .25s ease-in-out;
-    transition:all .25s ease-in-out; 
+    transition:all .25s ease-in-out;
 }
 
 button:active {
@@ -534,6 +534,21 @@ blockquote {
             box-sizing: border-box;     /* Opera/IE 8+ */
 }
 
+pre{
+  margin: 1.5em 0;
+  line-height: 1.5;
+  background: #272822;
+  color: #f8f8f2;
+  padding: 10px;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+code, pre {
+  white-space: pre;
+  font-family: 'Source Code Pro', 'andale mono', 'lucida console', monospace;
+  font-size: 13px;
+}
 
 /* --------------------------------------------------------------
 Metadata
@@ -768,7 +783,7 @@ Twitter
     padding: 0;
     overflow-y: hidden;
 }
-    
+
 .tweet_list li {
     overflow-y: auto;
     overflow-x: hidden;
@@ -779,7 +794,7 @@ Twitter
 .tweet_list .tweet_avatar {
     padding-right: .5em; float: left;
 }
-        
+
 .tweet_list .tweet_avatar img {
     vertical-align: middle;
 }
@@ -852,7 +867,7 @@ Media queries
 
     section, .post_image, .post_video {
         margin-left: 20px;
-        margin-right: 20px; 
+        margin-right: 20px;
     }
 
     section {
