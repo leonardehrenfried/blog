@@ -5,11 +5,11 @@ title: Leonard Ehrenfried's notebook
 {% for post in paginator.posts %}
   <section>
     <div class="eight columns">
-      <h4 class="post_title"><a href="{{site.baseurl}}/{{ post.url }}">{{ post.title }}</a></h4>
+      <h4 class="post_title"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h4>
       <span class="post_date">{{ post.date | date: "%d %B, %Y" }}</span>
       {{ post.content }}
       <p>
-        <a id="more" href="{{site.baseurl}}/{{ post.url }}#disqus_thread">Comments &raquo;</a>
+        <a id="more" href="{{site.baseurl}}{{ post.url }}#disqus_thread">Comments &raquo;</a>
       </p>
     </div>
     <br class="clear">
