@@ -1,7 +1,7 @@
 pygments:   true
 markdown:   redcarpet
 permalink:  /:year/:month/:title
-baseurl:    /blog/
+baseurl:    /blog
 url:        http://lenni.info/blog
 rdiscount extensions: [smart]
 paginate:   5
