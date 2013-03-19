@@ -871,8 +871,8 @@ Media queries
     }
 
     section, .post_image, .post_video {
-        margin-left: 20px;
-        margin-right: 20px;
+        /*margin-left: 20px;
+        margin-right: 20px;*/
     }
 
     section {
