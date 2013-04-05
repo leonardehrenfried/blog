@@ -13,7 +13,7 @@ Even though it quite often hurts my brain a little bit, learning Scala has been
 a more pleasurable part of my job lately. It definitely isn't for the
 faint-hearted but it certainly has taught me a lot about thinking precisely about
 what my code is doing. The functional mindset forces you to think mainly about
-input and output of functions and this training makes me better programmer
+input and output of functions and this training makes me a better programmer
 even when programming in a language other than Scala.
 
 ####Tools
@@ -21,14 +21,14 @@ Even though the language is beautiful the tools aren't. I'm not really an IDE
 lover, quite the opposite, but I have come around to taking a shine to the
 comforts that IntelliJ is offering when writing Java.
 
-I was happy to see that Intell-J has a plugin for Scala development and have
+I was happy to see that IntellJ has a plugin for Scala development and have
 been using that for the last couple of months. Sadly, the plugin is really,
 really slow which makes it pretty unusable to me.
 
 ####Enter vim
 
 I'm already using vim for everything other than Java so I hunted around the
-web in order to find plugins and work and I've been quite satisfied with the
+web in order to find plugins. I've been quite satisfied with the
 following ones.
 
 ####[vim-scala](vim-scala)
@@ -39,7 +39,7 @@ Obviously, you will need syntax highlighting and this plugin provides that.
 The built-in Vim autocomplete isn't great for Scala but the `neocomplcache` plugin
 makes typing out long Scala class or package names easier. There is no
 semantic analysis behind it so all this plugin does is string matching but
-I was very surprised to realise that this takes you a long way. To, at least,
+I was very surprised to realise that this takes you a long way. To me at least
 it is adequate.
 
 ####ctags
