@@ -80,4 +80,4 @@ set tags=tags;/
 Now, if you move the cursor over a type name and press `Ctrl-]` you will jump
 to the definition of the type. That's pretty nifty!
 
-If you want to go back to before the jump press `Ctrl-T`.
+If you want to go back to where you were before the jump press `Ctrl-T`.
