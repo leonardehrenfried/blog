@@ -19,7 +19,7 @@ task :deploy do
 end
 
 task :server do
-  sh "jekyll serve --watch --baseurl=/blog"
+  sh "bundle exec jekyll serve auto --baseurl=/blog"
 end
 
 task :list do

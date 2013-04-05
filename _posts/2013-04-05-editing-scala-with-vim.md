@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Editing Scala with Vim
+title: Editing Scala with vim
 tags:
 - vim
 - scala
 - ctags
 type: post
-published: false
+published: true
 ---
 
 Even though it quite often hurts my brain a little bit, learning Scala has been
@@ -15,18 +15,18 @@ faint-hearted it certainly has taught me a lot about thinking precisely about
 what my code is doing. This makes me better programmer when programming in a
 language other than Scala.
 
-###Tools
+####Tools
 Even though the language is beautiful the tools aren't. I'm not really an IDE
 lover, quite the opposite, but I have come around to taking a shine to the
 comforts that Intelli-J is offering when writing Java.
 
-I was happy to see the Intelli-J has a plugin for Scala development and have
+I was happy to see that Intelli-J has a plugin for Scala development and have
 been using that for the last couple of months. Sadly, the plugin is really,
 really slow which makes it pretty unusable to me.
 
-###Enter Vim
+####Enter vim
 
-I'm already using Vim for everything other than Java so I hunted around the
+I'm already using vim for everything other than Java so I hunted around the
 web in order to find plugins and work and I've been quite satisfied with the
 following ones.
 
@@ -35,9 +35,15 @@ Obviously, you will need syntax highlighting and this plugin provides that.
 
 ####[neocomplcache](https://github.com/Shougo/neocomplcache)
 
-The built-in Vim autocomplete isn't great for Scala.
+The built-in Vim autocomplete isn't great for Scala but the `neocomplcache` plugin
+makes typing out long Scala class or package names easier. There is no
+semantic analysis behind so all this plugin does is string matching but
+I was very surprised to realise that this takes you a long way.
 
-`~/.ctags`
+####ctags
+
+In order to enable jump-to-source navigation you need to configure ctags to
+index scala files. You can do that by adding the following to your `~/.ctags`:
 
 ```bash
 --langdef=scala
@@ -54,11 +60,17 @@ The built-in Vim autocomplete isn't great for Scala.
 --regex-scala=/^[ \t]*package[ \t]+([a-zA-Z0-9_.]+)/\1/p,packages/
 ```
 
-Create tags
+After having done that you need to run ctags from the root of your project
+directory with something like this:
 
 ```bash
-ctags -R --exclude=target --exclude=vendor
+ctags -R . --exclude=target --exclude=vendor
 ```
-Allow ctags to go up the directory hierarchy
 
-```set tags=tags;/```
+By default vim will only look for the tags file in the directory of the file
+open in the current buffer. If you want vim do move up the directory hierarchy
+until it has found the file add this to you `~/.vimrc`:
+
+```vim
+set tags=tags;/
+```
