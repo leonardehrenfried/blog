@@ -18,7 +18,7 @@ even when programming in a language other than Scala.
 
 ####Tools
 Even though the language is beautiful the tools aren't. I'm not really an IDE
-lover, quite the opposite, but I have come around to taking a shine to the
+lover, quite the opposite, but I have started taking a shine to the
 comforts that IntelliJ is offering when writing Java.
 
 I was happy to see that IntellJ has a plugin for Scala development and have
@@ -29,14 +29,14 @@ really slow which makes it pretty unusable to me.
 
 I'm already using vim for everything other than Java so I hunted around the
 web in order to find plugins. I've been quite satisfied with the
-following ones.
+following combination.
 
 ####[vim-scala](vim-scala)
 Obviously, you will need syntax highlighting and this plugin provides that.
 
 ####[neocomplcache](https://github.com/Shougo/neocomplcache)
 
-The built-in Vim autocomplete isn't great for Scala but the `neocomplcache` plugin
+The built-in vim autocomplete isn't great for Scala but the `neocomplcache` plugin
 makes typing out long Scala class or package names easier. There is no
 semantic analysis behind it so all this plugin does is string matching but
 I was very surprised to realise that this takes you a long way. To me at least
