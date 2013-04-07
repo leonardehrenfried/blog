@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Yeah! I'm a Vim contributor!
+title: Yeah! I'm a vim contributor!
 tags:
 - Mixed
 - vim

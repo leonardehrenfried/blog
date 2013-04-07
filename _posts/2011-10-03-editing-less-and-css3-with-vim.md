@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Editing LESS and CSS3 with Vim
+title: Editing LESS and CSS3 with vim
 tags:
 - css
 - less
@@ -23,9 +23,9 @@ When a coworker suggested using a CSS precompiler to help our <a href="http://st
 
 What a difference! I may end up sounding like a used-car salesman but it really is a difference like day and night. I'd love to tell you lots of reasons why these precompilers are great, but unfortunately Jason Z. from 37 signals has done a <a href="http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade">much better job</a>.
 
-###Wasn't this post suppossed to be about Vim?
+###Wasn't this post suppossed to be about vim?
 
-Lets talk business then. I'm using Vim to edit LESS and it looks like this:
+Lets talk business then. I'm using vim to edit LESS and it looks like this:
 
 ![Alt text](https://github.com/lenniboy/vim-less/raw/master/screenshot.png)
 
@@ -49,8 +49,8 @@ This has a very complete syntax file for CSS3 and I have  added support for thi
 
 ###Improvements for the future
 
-The current autocomplete (hit Ctr-X, Ctrl-O if you've never used it) that ships with standard Vim is pretty complete for CSS2. However there is no autocomplete script for CSS3. Looking at the <a href="http://code.google.com/p/vim/source/browse/runtime/autoload/csscomplete.vim">CSS2 version</a>, it shouldn't actually be too hard to parse the syntax highlight files and add the new properties to the existing script.
+The current autocomplete (hit Ctr-X, Ctrl-O if you've never used it) that ships with standard vim is pretty complete for CSS2. However there is no autocomplete script for CSS3. Looking at the <a href="http://code.google.com/p/vim/source/browse/runtime/autoload/csscomplete.vim">CSS2 version</a>, it shouldn't actually be too hard to parse the syntax highlight files and add the new properties to the existing script.
 
 I'd also like to implement a syntax checker but looking the the source of lessc, LESS' command line compiler, there doesn't seem to be a validating phase that I could use.
 
-I also saw that some web-based CSS prettifyiers can order CSS properties alphabetically. Wouldn't that be a neat feature for Vim?
+I also saw that some web-based CSS prettifyiers can order CSS properties alphabetically. Wouldn't that be a neat feature for vim?
