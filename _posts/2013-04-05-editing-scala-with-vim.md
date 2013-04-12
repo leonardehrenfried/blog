@@ -9,7 +9,7 @@ type: post
 published: true
 ---
 
-Even though it quite often hurts my brain a little bit, learning Scala has been
+Even though it hurts my brain a little bit, learning Scala has been
 a more pleasurable part of my job lately. It definitely isn't for the
 faint-hearted but it certainly has taught me a lot about thinking precisely about
 what my code is doing. The functional mindset forces you to think mainly about
