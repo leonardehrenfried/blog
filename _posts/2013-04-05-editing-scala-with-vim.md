@@ -13,17 +13,18 @@ Even though it hurts my brain a little bit, learning Scala has been
 a more pleasurable part of my job lately. It definitely isn't for the
 faint-hearted but it certainly has taught me a lot about thinking precisely about
 what my code is doing. The functional mindset forces you to think mainly about
-input and output of functions and this training makes me a better programmer
+input and output of functions and this training, I feel, makes me a better programmer
 even when programming in a language other than Scala.
 
 ####Tools
-Even though the language is beautiful the tools aren't. I'm not really an IDE
-lover, quite the opposite, but I have started taking a shine to the
-comforts that IntelliJ is offering when writing Java.
+I'm not really an IDE lover, quite the opposite, but I have started taking a shine to the
+comforts that Intelli-J is offering when writing Java.
 
-I was happy to see that IntellJ has a plugin for Scala development and have
+I was happy to see that Intelli-J has a plugin for Scala development and have
 been using that for the last couple of months. Sadly, the plugin is really,
 really slow which makes it pretty unusable to me.
+
+There is no question that the languages is beautiful but the tools aren't.
 
 ####Enter vim
 

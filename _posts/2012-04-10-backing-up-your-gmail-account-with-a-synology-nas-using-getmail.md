@@ -21,12 +21,13 @@ I use a Synology NAS at home which has plenty of storage left to keep my roughly
 ###The setup
 Login to your NAS as root and install getmail with these commands:
 
-{% highlight bash %}ipkg update
+```bash
+ipkg update
 ipkg install python
 ipkg install py25-getmail
-{% endhighlight %}
+```
 
-Now that your have the software in place pick a place where the email should be stored. I chose <code>/volume1/Gmail</code> but any folder that is accessible to your ordinary user will do. Still logged in as root issue these commands:
+Now that your have the software installed pick a place where the email should be stored. I chose `/volume1/Gmail` but any folder that is accessible to your ordinary user will do. Still logged in as root issue these commands:
 
 {% highlight bash %}
 mkdir /volume1/Gmail
