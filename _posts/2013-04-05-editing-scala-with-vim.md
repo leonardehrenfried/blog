@@ -11,7 +11,7 @@ published: true
 
 Even though it hurts my brain a little bit, learning Scala has been
 a more pleasurable part of my job lately. It definitely isn't for the
-faint-hearted but it certainly has taught me a lot about thinking precisely about
+faint-hearted but it has taught me a lot about thinking precisely about
 what my code is doing. The functional mindset forces you to think mainly about
 input and output of functions and this training, I feel, makes me a better programmer
 even when programming in a language other than Scala.
@@ -37,7 +37,7 @@ Obviously, you will need syntax highlighting and this plugin provides that.
 
 ####[neocomplcache](https://github.com/Shougo/neocomplcache)
 
-The built-in vim autocomplete isn't great for Scala but the `neocomplcache` plugin
+The built-in vim autocomplete isn't great for Scala but the [`neocomplcache`](https://github.com/Shougo/neocomplcache) plugin
 makes typing out long Scala class or package names easier. There is no
 semantic analysis behind it so all this plugin does is string matching but
 I was very surprised to realise that this takes you a long way. To me at least
