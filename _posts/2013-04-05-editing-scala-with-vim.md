@@ -12,12 +12,12 @@ published: true
 Even though it hurts my brain a little bit, learning Scala has been
 a pleasurable part of my job lately. It definitely isn't for the
 faint-hearted but it has taught me a lot about thinking precisely about
-the topics of immutability and shared state. The functional mindset forces 
-you to think mainly about input and output of functions and this training, 
+the topics of immutability and shared state. The functional mindset forces
+you to think mainly about input and output of functions and this training,
 I feel, makes me a better programmer even when programming in a language other than Scala.
 
 ####Tools
-I'm not really an IDE lover, quite the opposite, but I have started taking 
+I'm not really an IDE lover, quite the opposite, but I have started taking
 a shine to the comforts that Intelli-J is offering when writing Java.
 
 I was happy to see that Intelli-J has a plugin for Scala development and have
@@ -82,3 +82,13 @@ Now, if you move the cursor over a type name and press `Ctrl-]` you will jump
 to the definition of the type. That's pretty nifty!
 
 If you want to go back to where you were before the jump press `Ctrl-T`.
+
+####Sorting of imports
+
+Based on feedback from a collegue who was complaining that my imports always
+look messy I have [contributed a command](https://github.com/derekwyatt/vim-scala/pull/24)
+ to the `vim-scala` plugin which automatically sorts your import statements.
+
+You can invoke the command with `:SortScalaImports` and there are two modes
+on how your imports could be sorted. By default the command goes through
+the import groups (which are defined as separated by a newline) and .
