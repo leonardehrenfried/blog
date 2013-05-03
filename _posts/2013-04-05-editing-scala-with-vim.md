@@ -91,4 +91,57 @@ look messy I have [contributed a command](https://github.com/derekwyatt/vim-scal
 
 You can invoke the command with `:SortScalaImports` and there are two modes
 on how your imports could be sorted. By default the command goes through
-the import groups (which are defined as separated by a newline) and .
+the import groups (which are defined as separated by a newline) and orders
+them alphabetically. This is useful for when you prefer to sort your import
+into groups yourself like this:
+
+```scala
+// Utility imports
+import com.me
+import com.them
+
+// Concurrency imports
+import akka....
+import scala...
+import java...
+import spray....
+
+// Domain imports
+import com.me.data....
+import com.me.data....
+```
+
+The second mode can be enabled by setting the following in your `.vimrc`:
+
+```vim
+let g:scala_sort_across_groups=1
+```
+
+This will take _all_ of your imports and puts them into 3 different groups:
+
+1. Java/Scala core libraries
+1. 3rd party libraries
+1. First party code, a.k.a your own
+
+What is considered first party code can be configured by setting the a regex.
+I have set it to this, which is for a standard Play app:
+
+```vim
+let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)'
+```
+The result of the sort looks like this:
+
+```scala
+import java.text.SimpleDateFormat
+import java.util.{ Currency, Locale, UUID, Calendar }
+import scala.collection.JavaConversions._
+import scala.util.Random
+
+import play.api._
+import play.api.mvc._
+
+import controllers.Secured._
+import de.mycompany.useful.library.Class
+import util._
+```
+
