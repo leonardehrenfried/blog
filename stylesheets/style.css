@@ -43,6 +43,7 @@ body {
 }
 ol, ul {
   margin-bottom: 30px;
+  padding-left: 20px;
 }
 blockquote, q {
     quotes: none;
