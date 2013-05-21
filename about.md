@@ -18,8 +18,9 @@ I'm member of the following websites:
   - [Github](https://github.com/lenniboy/)
     - [My pull requests](http://lenni.info/pull-request-widget/)
     - [A fairly nice timeline of my Github activity](http://zmoazeni.github.com/gitspective/#/timeline/lenniboy)
+    - [My open source report card](http://osrc.dfm.io/lenniboy)
   - [Xing](https://www.xing.com/profile/Leonard_Ehrenfried)
-  - <a title="My Pinboard" href="http://pinboard.in/u:lenniboy">Pinboard</a>
-  - <a href="http://rubygems.org/profiles/lenniboy">rubygems.org</a>
+  - [Pinboard](href="http://pinboard.in/u:lenniboy)
+  - [Rubygems](http://rubygems.org/profiles/lenniboy)
 
 In case you stumble over this blog through a Google search, I hope you'll find this as useful as I always do when I get stuck and find the solution on someone's personal blog.
