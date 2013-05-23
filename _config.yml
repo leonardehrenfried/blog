@@ -3,5 +3,6 @@ markdown:   redcarpet
 permalink:  /:year/:month/:title
 baseurl:    /blog
 url:        http://leonard.io/blog
+feed_base:  http://lenni.info/blog
 rdiscount extensions: [smart]
 paginate:   5
