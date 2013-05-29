@@ -24,7 +24,7 @@ I was happy to see that Intelli-J has a plugin for Scala development and have
 been using that for the last couple of months. Sadly, the plugin is really,
 really slow which makes it pretty unusable to me.
 
-There is no question that the languages is beautiful but the tools aren't.
+There is no question that the language is beautiful but the tools aren't.
 
 ####Enter vim
 
@@ -32,7 +32,7 @@ I'm already using vim for everything other than Java so I hunted around the
 web in order to find plugins. I've been quite satisfied with the
 following combination.
 
-####[vim-scala](vim-scala)
+####[vim-scala](https://github.com/derekwyatt/vim-scala)
 Obviously, you will need syntax highlighting and this plugin provides that.
 
 ####[neocomplcache](https://github.com/Shougo/neocomplcache)
