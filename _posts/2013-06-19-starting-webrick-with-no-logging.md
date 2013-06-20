@@ -2,9 +2,8 @@
 layout: post
 title: Starting WEBBrick with logging disabled
 tags:
-- vim
-- scala
-- ctags
+- ruby
+- webbrick
 type: post
 published: true
 ---
