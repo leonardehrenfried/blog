@@ -24,6 +24,6 @@ bicycle items for sale on an internet bulletin board_ and its focus is
 on natural language processing using the software [GATE](http://gate.ac.uk/)
 which is/was developed at the University of Sheffield.
 
-If you want to download the PDF you can also head over to
+If you want to read it you can head over to
 [the document on Google Drive](https://docs.google.com/file/d/0B8fpFPFuEud6MExRcGJmVDhBc3M/edit).
 From there you can download the original PDF on the top left corner.
