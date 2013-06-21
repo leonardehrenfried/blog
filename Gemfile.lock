@@ -8,8 +8,8 @@ GEM
       highline (~> 1.6.11)
     directory_watcher (1.4.1)
     fast-stemmer (1.0.2)
-    highline (1.6.18)
-    jekyll (1.0.2)
+    highline (1.6.19)
+    jekyll (1.0.3)
       classifier (~> 1.3)
       colorator (~> 0.1)
       commander (~> 4.1.3)
@@ -36,5 +36,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 1.0.2)
+  jekyll (~> 1.0.3)
   redcarpet (~> 2.2.2)
