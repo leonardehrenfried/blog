@@ -18,7 +18,7 @@ Here is how you disable logging completely:
 
 ```ruby
 dev_null = WEBrick::Log::new("/dev/null", 7)
-server = WEBrick::HTTPServer.new({ :Port => NOTIFICATION[:ip], :Logger => dev_null, :AccessLog => dev_null })
+server = WEBrick::HTTPServer.new({ :Port => 9000, :Logger => dev_null, :AccessLog => dev_null })
 server.start
 ```
 
