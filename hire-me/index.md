@@ -6,10 +6,13 @@ type: page
 published: true
 ---
 
-I'm a freelance developer living in Berlin with 4 years of experience and
-I'm always looking for interesting projects. My main expertise if with web
+I'm a freelance developer with 4 years of experience living in Berlin and
+I'm always looking for interesting projects. My main expertise is with web
 development and I'm familiar with a number of programming languages including
 JavaScript, Ruby, Python, Scala, Java and Objective-C.
+
+I'm an expert in distributed version control, TDD and continuous integration
+and deployment and would love to introduce you and your team to these topics.
 
 If you like what you read on this blog and you've convinced yourself that
 I'm a competent developer by looking through my
