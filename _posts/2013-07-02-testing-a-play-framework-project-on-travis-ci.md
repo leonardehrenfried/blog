@@ -14,7 +14,8 @@ straightforward as I had hoped. There are some guides floating around the
 web telling you to download the binary distribution and execute that.
 
 I, however, found that it is easier, quicker and cleaner to use the `sbt`
-command that comes preinstalled with the Travis VMs.
+command that comes preinstalled with the Travis VMs. (The `play`
+command is just a thin wrapper around `sbt` anyway.)
 
 What it boils down to is this `.travis.yml`:
 
