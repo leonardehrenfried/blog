@@ -18,8 +18,13 @@ title: Leonard Ehrenfried's notebook
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="/blog/page{{paginator.previous_page}}" class="previous">
-      <button class="light"><i class="icon-chevron-left"></i></button>
+      {% if paginator.previous_page == 1 %}
+        <a href="/blog/" class="previous">
+        <button class="light"><i class="icon-chevron-left"></i></button>
+      {% else %}
+        <a href="/blog/page{{paginator.previous_page}}" class="previous">
+        <button class="light"><i class="icon-chevron-left"></i></button>
+      {% endif %}
     </a>
   {% endif %}
 
