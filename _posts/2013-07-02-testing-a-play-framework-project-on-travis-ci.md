@@ -14,8 +14,8 @@ straightforward as I had hoped. There are some guides floating around the
 web telling you to download the binary distribution and execute that.
 
 I, however, found that it is easier, quicker and cleaner to use the `sbt`
-command that comes preinstalled with the Travis VMs. (The `play`
-command is just a thin wrapper around `sbt` anyway.)
+command that comes preinstalled with the Travis VMs if you set the language to
+`scala`. (The `play` command is just a thin wrapper around `sbt` anyway.)
 
 What it boils down to is this `.travis.yml`:
 
@@ -24,10 +24,6 @@ language: scala
 scala:
    - 2.10.0
 script: sbt test
-notifications:
-  email:
-    on_success: never
-    on_failure: change
 ```
 
 You will also need to make sure that you have specified at least version
@@ -38,6 +34,25 @@ sbt.version=0.12.3
 ```
 I found that with earlier sbt versions I would get a weird error whereby a
 `slf4j-api` dependency couldn't be resolved.
+
+###Using the `play` command
+
+Today I also got a second variation working by downloading the Play zip
+distribution and running that.
+
+```yaml
+language: scala
+env:
+  - PLAY_VERSION=2.1.1
+before_script:
+  - wget http://downloads.typesafe.com/play/${PLAY_VERSION}/play-${PLAY_VERSION}.zip
+  - unzip -q play-${PLAY_VERSION}.zip
+script: play-${PLAY_VERSION}/play test
+```
+This takes a little longer but runs the tests in the way a developer is
+advised by Play documentation to do it. I think either way is fine.
+
+###Example project
 
 [`commercetools/sphere-snowflake`](https://github.com/commercetools/sphere-snowflake)
 is an example Github repository of a Play project being tested on Travis.
