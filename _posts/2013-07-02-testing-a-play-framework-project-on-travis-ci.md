@@ -50,7 +50,7 @@ before_script:
 script: play-${PLAY_VERSION}/play test
 ```
 This takes a little longer but runs the tests in the way a developer is
-advised by Play documentation to do it. I think either way is fine.
+advised by the Play documentation to do it. I think either way is fine.
 
 You must make absolutely sure that you are using the same Play version in
 your `travis.yml` and the `play-sbt-plugin` in your `build.sbt`.
