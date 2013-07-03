@@ -25,3 +25,7 @@ end
 task :list do
   sh "ls -l _posts/|grep html"
 end
+
+task :clean do
+  rm_rf "_site"
+end

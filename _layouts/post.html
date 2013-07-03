@@ -5,7 +5,9 @@ layout: layout
 <section>
   <div class="eight columns">
     <h4 class="post_title">{{ page.title }}</h4>
-    <span class="post_date">{{ page.date | date: "%d %B, %Y" }}</span>
+    <span class="post_date">
+      <time class="entry-date" datetime="{{page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %B, %Y" }}</time>
+    </span>
     {{ content }}
     <div id="disqus_thread"></div>
   </div>
