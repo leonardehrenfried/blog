@@ -35,7 +35,7 @@ sbt.version=0.12.3
 I found that with earlier sbt versions I would get a weird error whereby a
 `slf4j-api` dependency couldn't be resolved.
 
-###Using the `play` command
+####Using the play command
 
 Today I also got a second variation working by downloading the Play zip
 distribution and running that.
@@ -52,7 +52,10 @@ script: play-${PLAY_VERSION}/play test
 This takes a little longer but runs the tests in the way a developer is
 advised by Play documentation to do it. I think either way is fine.
 
-###Example project
+You must make absolutely sure that you are using the same Play version in
+your `travis.yml` and the `play-sbt-plugin` in your `build.sbt`.
+
+####Example project
 
 [`commercetools/sphere-snowflake`](https://github.com/commercetools/sphere-snowflake)
 is an example Github repository of a Play project being tested on Travis.
