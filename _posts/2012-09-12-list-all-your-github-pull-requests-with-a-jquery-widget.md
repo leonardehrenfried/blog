@@ -20,6 +20,7 @@ The problem however is, that some of the work I do is in pull requests to other 
 
 So, in order to show off the pull requests I have done, I coded up a little widget (needs jQuery) which pulls the information out of the API and displays it. So, without much further ado, here it is.
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://lenni.info/pull-request-widget/pull-request-widget.js"></script>
 <link rel="stylesheet" href="http://lenni.info/pull-request-widget/pull-request-widget.css"/>
 
