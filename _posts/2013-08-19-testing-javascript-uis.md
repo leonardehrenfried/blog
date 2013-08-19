@@ -102,7 +102,7 @@ In my option, that's the qualitative distinction.
 In fact, if all your server produces is JSON, testing asserting against that
 becomes easy too. You no longer have to do some DOM gymnastics to find out
 if your the server has generated the correct response: just parse the JSON
-and assert agains that.
+and assert against that.
 
 #### Conclusion
 
