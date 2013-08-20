@@ -81,10 +81,9 @@ to the table instead of manipulating some globally available DOM.
 
 If we write our UI widgets in this style testing is rather easy. Before, if
 you wanted to really test your JS you had to test both the HTML the server
-produced _as well_ as the widget code that operated on it.
-
-In order to test full cycle you had to somehow also build up the entire
-context of the server-side templating language.
+produced _as well_ as the widget code that operated on it. That would mean to
+somehow also build up the entire context of the server-side templating
+language and render a full response.
 
 Whilst before you were never quite sure that the HTML you produced was matching
 the expectations the JS had, it is now rather easy to assert against the widget.
