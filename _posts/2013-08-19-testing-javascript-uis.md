@@ -94,9 +94,9 @@ expect(view.clickCount).toBe(1);
 ```
 
 This new-found engineering rigour means that JS code can be as easily tested
-as server side code, if not easier and what has made the difference is
+as server side code, if not easier. What has made the difference is
 the coupling of JS with the HTML it operates on (and produces).
-In my option, that's the qualitative distinction.
+In my opinion, that's the qualitative distinction.
 
 In fact, if all your server produces is JSON, testing asserting against that
 becomes easy too. You no longer have to do some DOM gymnastics to find out
