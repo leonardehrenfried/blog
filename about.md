@@ -20,6 +20,7 @@ I'm member of the following websites:
     - [A fairly nice timeline of my Github activity](http://zmoazeni.github.com/gitspective/#/timeline/lenniboy)
     - [My open source report card](http://osrc.dfm.io/lenniboy)
   - [Xing](https://www.xing.com/profile/Leonard_Ehrenfried)
+  - [LinkedIn](http://www.linkedin.com/pub/leonard-ehrenfried/82/b/615)
   - [Pinboard](http://pinboard.in/u:lenniboy)
   - [Rubygems](http://rubygems.org/profiles/lenniboy)
 
