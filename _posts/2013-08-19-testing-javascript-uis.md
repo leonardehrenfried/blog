@@ -23,7 +23,7 @@ has been completed.
 But still, there is a large holdout who think of browser programming with
 Javascript as a foolish activity and not a serious developer's job.
 
-Today, I chatted to a friend about this and have started to develop at theory
+Today I chatted to a friend about this and have started to develop at theory
 why that might be. I think it has partially something to do with how Javascript
 testing was done in the browser.
 
@@ -32,16 +32,16 @@ testing was done in the browser.
 On traditional web apps it worked mostly like this:
 
 - The server spits out HTML which is the baseline and users should be able to
-use the app/website even whith JS disabled
+use the app/website even with JS disabled
 - Javascript then takes the exitisting HTML and applies some transformation on
 it, rendering it more interactive.
 
 This meant that the widgets the frontend developers built were really hard to
-test, due to the fact that HTML were JS was largely separated.
+test, due to the fact that HTML and JS were largely separated.
 The widget expected a certain kind of HTML to operate on and if this structure
 wasn't there, mostly the JS widget would just not work.
 
-Activating one of these widgets often work something like this
+Activating one of these widgets would often work something like this
 
 ```javascript
 $(".my-widget").datepicker("activate");
@@ -94,13 +94,13 @@ expect(view.clickCount).toBe(1);
 ```
 
 This new-found engineering rigour means that JS code can be as easily tested
-as server side code, if not easier and this difference that has made is
+as server side code, if not easier and what has made the difference is
 the coupling of JS with the HTML it operates on (and produces).
 In my option, that's the qualitative distinction.
 
 In fact, if all your server produces is JSON, testing asserting against that
 becomes easy too. You no longer have to do some DOM gymnastics to find out
-if your the server has generated the correct response: just parse the JSON
+if your server has generated the correct response: just parse the JSON
 and assert against that.
 
 #### Conclusion
