@@ -98,10 +98,10 @@ as server side code, if not easier. What has made the difference is
 the coupling of JS with the HTML it operates on (and produces).
 In my opinion, that's the qualitative distinction.
 
-In fact, if all your server produces is JSON, testing asserting against that
-becomes easy too. You no longer have to do some DOM gymnastics to find out
-if your server has generated the correct response: just parse the JSON
-and assert against that.
+In fact, if all your server produces is JSON asserting against that becomes
+easy too. You no longer have to do some DOM gymnastics to find out if your
+server has generated the correct response: just parse the JSON and assert
+against that.
 
 #### Conclusion
 
