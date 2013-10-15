@@ -4,7 +4,7 @@ title: ack2 package for Ubuntu 12.04
 type: post
 published: true
 ---
-Ubuntu 12.04 Precise Pengolin ships with version 1.96 of [ack2](http://betterthangrep.com) which has been superseded by the much improved version 2.
+Ubuntu 12.04 Precise Pengolin ships with version 1.96 of [ack](http://beyondgrep.com) which has been superseded by the much improved version 2.
 
 Since I'm now using Ubuntu on my work computer I have built a Debian/Ubuntu package and uploaded it to a PPA. This makes installing ack2 really easy on Ubuntu 12.04.
 
