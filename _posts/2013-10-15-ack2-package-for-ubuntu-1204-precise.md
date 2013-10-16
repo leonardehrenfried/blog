@@ -21,7 +21,7 @@ Afterwards, ack will be available as `ack-grep` (there is another program in the
 Since I share my `.bashrc` between OS X and Linux I've aliased it as follows:
 
 ```bash
-if [ "$os" == "Linux" ]
+if [ `uname` == "Linux" ]
 then
   alias ack="ack-grep"
 fi
