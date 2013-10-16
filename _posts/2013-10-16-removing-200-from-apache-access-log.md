@@ -7,7 +7,7 @@ tags:
   - log
 published: true
 ---
-At work we use Splunk to do our log analyis of our frontend Apache which simpy
+At work we use Splunk to do log analysis of our frontend Apache which simply
 proxies to the application servers. I quite like Splunk but we were
 hitting our quota quite frequently when we started to include our access log
 to the indexed files.
@@ -25,9 +25,25 @@ On the other hand I found out about piped logs. The idea is that you can just
 pipe the log to another process which in turn can do any log processing and
 filtering you want.
 
-I choose the following combination of `grep` and Apache's `rotatelogs`.
+I choose a combination of `grep` and Apache's `rotatelogs`. Put the following
+in your Apache configuration:
 
-```
+```apache
 LogFormat "%s %h %l %u %t \"%r\" %b" splunk
-CustomLog "|stdbuf -o0 /bin/grep --invert-match '^200' | /usr/sbin/rotatelogs /data/home/lehrenfried/splunk-access.log 86400" splunk
+CustomLog "|stdbuf -o0 /bin/grep --invert-match '^200' | /usr/sbin/rotatelogs /var/log/apache2/splunk-access.log 86400" splunk
 ```
+
+The first line defines a log format with the nickname `splunk`. In this format
+we put the response code (`%s`) at the beginning of the log file so we can
+grep for it easily.
+
+The second one is where the action starts. The pipe (`|`) indicates that it is
+a piped log. Next we use `stdbuf -o0` to disable `stdin` buffering which makes
+it a pain to test this setup. You can skip this in production if you want to.
+
+Next we hand over to `grep` and remove all lines that start with the string
+200.
+
+Finally we pass the data on to `rotatelogs` which rotates the log once a day
+and gzippes those older than a day. Read the `rotatelogs` manual for many
+more configuration settings.
