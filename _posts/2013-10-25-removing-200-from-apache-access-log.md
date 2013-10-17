@@ -5,7 +5,7 @@ type: post
 tags:
   - apache
   - log
-published: true
+published: false
 ---
 At work we use Splunk to do log analysis of our frontend Apache which acts as
 a simple proxy to the application servers. I quite like Splunk but we were
