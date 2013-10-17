@@ -7,8 +7,8 @@ tags:
   - log
 published: true
 ---
-At work we use Splunk to do log analysis of our frontend Apache which simply
-proxies to the application servers. I quite like Splunk but we were
+At work we use Splunk to do log analysis of our frontend Apache which acts as
+a simple proxy to the application servers. I quite like Splunk but we were
 hitting our quota quite frequently when we started to include our access log
 to the indexed files.
 
@@ -16,9 +16,10 @@ We noticed that the vast majority of our entries in the access log had `200`
 response statuses. We're actually not that interested in all these 200s and
 it would greatly reduce our Splunk usage if we could filter them all out.
 What we could have done is to just use the normal access log and then have a
-cronjob grep out all the 400s and 500s but that didn't seem very elegant.
+cronjob grep out all the 400s and 500s but that didn't seem very elegant. I
+wanted a solution without an intermediate step.
 
-Apache has a feature called conditional logging, however, it can't be used to
+Apache has a feature called conditional logging however it can't be used to
 filter by response code.
 
 On the other hand I found out about piped logs. The idea is that you can just
