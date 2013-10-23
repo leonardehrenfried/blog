@@ -5,7 +5,7 @@ type: post
 tags:
   - apache
   - log
-published: false
+published: true
 ---
 At work we use Splunk to do log analysis of our frontend Apache which acts as
 a simple proxy to the application servers. I quite like Splunk but we were
@@ -26,8 +26,8 @@ On the other hand I found out about piped logs. The idea is that you can just
 pipe the log to another process which in turn can do any log processing and
 filtering you want.
 
-I choose a combination of `grep` and Apache's `rotatelogs`. Put the following
-in your Apache configuration:
+I choose a combination of `grep` and Apache's `rotatelogs`. To use it put
+the following in your Apache configuration:
 
 ```apache
 LogFormat "%s %h %l %u %t \"%r\" %b" splunk
