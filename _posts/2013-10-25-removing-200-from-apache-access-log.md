@@ -46,5 +46,6 @@ Next we hand over to `grep` and remove all lines that start with the string
 200.
 
 Finally we pass the data on to `rotatelogs` which rotates the log once a day
-and gzippes those older than a day. Read the `rotatelogs` manual for many
-more configuration settings.
+and gzippes those older than a day. Read the `rotatelogs`
+[manual](http://httpd.apache.org/docs/2.2/programs/rotatelogs.html)
+for many more configuration settings.
