@@ -5,10 +5,12 @@ type: post
 tags:
   - ubuntu
   - debian
-published: false
+published: true
 ---
 Run the following command:
+
 ```bash
 dpkg-query -W -f='${Maintainer}' coreutils
 ```
+
 Obviously, replace `coreutils` with the package you're interested in.
