@@ -7,6 +7,8 @@ tags:
   - debian
 published: false
 ---
+Run the following command:
 ```bash
 dpkg-query -W -f='${Maintainer}' coreutils
 ```
+Obviously, replace `coreutils` with the package you're interested in.
