@@ -15,7 +15,7 @@ meta:
 ---
 Yesterday I gave a talk at Cocoaheads Berlin, which is the iOS/OS X developers user group here. The talk was titled "CocoaPods - Sane library management for Xcode".
 
-If you are interested in reading <a href="http://lenni.info/cocoapods-talk/">my HTML slide deck</a>, I've made them available online.
+If you are interested in reading <a href="http://lenni.info/talks/cocoapods/">my HTML slide deck</a>, I've made them available online.
 
 Here is the same thing in a little embedded viewer:
 
