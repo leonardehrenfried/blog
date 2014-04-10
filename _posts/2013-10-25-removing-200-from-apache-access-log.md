@@ -19,14 +19,14 @@ What we could have done is to just use the normal access log and then have a
 cronjob grep out all the 400s and 500s but that didn't seem very elegant. I
 wanted a solution without an intermediate step.
 
-Apache has a feature called conditional logging however it can't be used to
+Apache has a feature called conditional logging, however it can't be used to
 filter by response code.
 
-On the other hand I found out about piped logs. The idea is that you can just
+On the other hand I found out about piped logs. The idea is that you just
 pipe the log to another process which in turn can do any log processing and
 filtering you want.
 
-I choose a combination of `grep` and Apache's `rotatelogs`. To use it put
+I chose a combination of `grep` and Apache's `rotatelogs`. To use it, put
 the following in your Apache configuration:
 
 ```apache
@@ -46,6 +46,6 @@ Next we hand over to `grep` and remove all lines that start with the string
 200.
 
 Finally we pass the data on to `rotatelogs` which rotates the log once a day
-and gzippes those older than a day. Read the `rotatelogs`
+and gzipps those older 24 hours. Read the `rotatelogs`
 [manual](http://httpd.apache.org/docs/2.2/programs/rotatelogs.html)
 for many more configuration settings.
