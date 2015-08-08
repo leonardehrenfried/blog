@@ -47,7 +47,7 @@ because it doesn't exist yet.
 
 ####Libraries and frameworks
 
-This is currently a weak spot. Obviously, you can use the fantastice Scala
+This is currently a weak spot. Obviously, you can use the fantastic Scala
 core library which to me is one of the main appeals. I haven't found out how
 easy it is to get third party libraries like, say, Joda-Time working.
 
