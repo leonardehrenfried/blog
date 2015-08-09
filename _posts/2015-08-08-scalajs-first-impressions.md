@@ -20,9 +20,10 @@ Scala, JS's weak types really grind on you: they make refactoring
 really difficult and you discover many problems, which a compiler would tell
 you much earlier, at runtime. :/
 
-Help is at hand: Typesafe is developing [ScalaJS](http://www.scala-js.org/),
-which compiles Scala to JavaScript. This weekend I took it for a spin and
-here are my observations. (Mind you, this isn't a thorough review but rather a
+Help is at hand: EPFL (where Martin Odersky is a professor) is developing
+[ScalaJS](http://www.scala-js.org/), which compiles Scala to JavaScript.
+This weekend I took it for a spin and here are my observations.
+(Mind you, this isn't a thorough review but rather a
 rough-and-ready stream of consciousness.)
 
 ####Nice integration with sbt
@@ -78,8 +79,8 @@ I'm very excited about ScalaJS and I think it's very promising. It gets
 a lot of things right and people are working on the things that aren't so
 great yet.
 
-I might sound like a fanboy, but most things that Typesafe does these days
-are very high quality and this is no exception.
+I might sound like a fanboy, but most things coming out of the Scala ecosystem
+these days are very high quality and this is no exception.
 
 If you can tolerate a little technological immaturity and don't mind being an
 early adopter, I would seriously consider ScalaJS for you next frontend project.
