@@ -36,9 +36,9 @@ The compilation process is not slower than the compiler that targets the JVM.
 However, the Scala compiler _is_ quite slow but you get used to it because it
 really helps you during development. Those sweet, sweet types are great!
 
-The compiler produces unreadable code which will make debugging harder but
-I've read that source maps are available. I haven't been able to make them work
-yet.
+The compiler produces unreadable code which will make debugging harder.
+<del>I've read that source maps are available, but I haven't been able to make them work
+yet.</del> Source maps do work and can help you debugging!
 
 ####Community
 
