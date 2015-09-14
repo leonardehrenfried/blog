@@ -9,10 +9,10 @@ tags:
   - xms
 published: true
 ---
-If you've been working on a bigger Scala project you will probably eperienced
-that SBT consumers a rather large amount of memory and can crash with a
-`OutOfMemoryError Metaspace`. There is a lot of advise floating around the web
-that tells you to set your memory options in `$SBT_OPTS`.
+If you've been working on a bigger Scala project you will probably have
+experienced that SBT consumers a rather large amount of memory and can crash
+with a `OutOfMemoryError Metaspace`. There is a lot of advise floating around
+the web that tells you to set your memory options in `$SBT_OPTS`.
 
 I learned  that this is only partially true.
 
