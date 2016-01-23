@@ -2,7 +2,9 @@ permalink:  /:year/:month/:title
 baseurl:    /blog
 url:        http://leonard.io/blog
 feed_base:  http://lenni.info/blog
-gems: [jekyll-paginate]
+gems:       [jekyll-paginate, redcarpet]
 paginate:   5
-kramdown:
-  input: GFM
+markdown:   redcarpet
+redcarpet:
+  extensions: [smart]
+
