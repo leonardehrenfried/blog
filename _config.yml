@@ -1,8 +1,8 @@
-highlighter: pygments
-markdown:   redcarpet
 permalink:  /:year/:month/:title
 baseurl:    /blog
 url:        http://leonard.io/blog
 feed_base:  http://lenni.info/blog
-rdiscount extensions: [smart]
+gems: [jekyll-paginate]
 paginate:   5
+kramdown:
+  input: GFM
