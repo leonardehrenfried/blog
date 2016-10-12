@@ -27,7 +27,7 @@ What a difference! I may end up sounding like a used-car salesman but it really 
 
 Lets talk business then. I'm using vim to edit LESS and it looks like this:
 
-![Alt text](https://github.com/lenniboy/vim-less/raw/master/screenshot.png)
+![Alt text](https://github.com/leonardehrenfried/vim-less/raw/master/screenshot.png)
 
 I can recommend a trio of plugins for LESS and general CSS3 editing:
 

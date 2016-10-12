@@ -15,7 +15,7 @@ I work as a developer in Berlin. If you want to get in touch send an email to <a
 
 I'm member of the following websites:
 
-  - [Github](https://github.com/lenniboy/)
+  - [Github](https://github.com/leonardehrenfried/)
     - [My pull requests](http://lenni.info/pull-request-widget/)
     - [A fairly nice timeline of my Github activity](http://zmoazeni.github.com/gitspective/#/timeline/lenniboy)
     - [My open source report card](http://osrc.dfm.io/lenniboy)

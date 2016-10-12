@@ -16,6 +16,6 @@ and deployment and would love to introduce you and your team to these topics.
 
 If you like what you read on this blog and you've convinced yourself that
 I'm a competent developer by looking through my
-[Github profile](https://github.com/lenniboy) then please get in touch via
+[Github profile](https://github.com/leonardehrenfried) then please get in touch via
 [email](mailto:leonard.ehrenfried+hire-me@gmail.com) or phone +49 151 2911 7990.
 

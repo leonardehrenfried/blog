@@ -21,11 +21,11 @@ Skim is able to detect, when the currently loaded PDF is being changed on disk a
 Trusty old Python came to the rescue: I wrote a little script that recursively  scans the current directory every 5 seconds and executes an arbitrary command, when a file has been changed since the last scan.
 
 You can install it with the following one liner (I'm assuming ~/bin exists and is on your PATH):
-{% highlight bash %}cd ~/bin && wget http://github.com/lenniboy/runonsave/raw/master/runonsave.py && chmod +x runonsave.py{% endhighlight %}
+{% highlight bash %}cd ~/bin && wget http://github.com/leonardehrenfried/runonsave/raw/master/runonsave.py && chmod +x runonsave.py{% endhighlight %}
 If you want to watch the current directory for changes and and then run the Latex compiler simply do a
 {% highlight bash %}runonsave.py pdflatex cv.tex{% endhighlight %}
 This works with any command - not only with Latex. One other use case I could think of was regenerating your image sprites when you have saved an image and all sorts of other asset packing.
 
 The script also automatically ignores common SCM folders. Just be careful if you are watching a huge directory tree; in this case you probably want to lower the time between scans. (At the moment this time is hard-coded in but I'm planning to use optparse in the future).
 
-The script also has a <a href="http://github.com/lenniboy/runonsave/">repository</a> on Github. If you have any improvements, for example using a better way to figure out if something has changed, go ahead and fork it.
+The script also has a <a href="http://github.com/leonardehrenfried/runonsave/">repository</a> on Github. If you have any improvements, for example using a better way to figure out if something has changed, go ahead and fork it.

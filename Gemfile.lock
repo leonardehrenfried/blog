@@ -38,3 +38,6 @@ DEPENDENCIES
   jekyll (~> 3.0.2)
   jekyll-paginate
   redcarpet
+
+BUNDLED WITH
+   1.10.3

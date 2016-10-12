@@ -128,7 +128,7 @@ If the project-wide full text search of `$FAVOURITE_IDE` sucks, and lets be hone
 
 Even though it is currently still in alpha state, I'm using version 2.0 for a couple of months now without any issues. Ack 2 removes the limitation of having to keep a whitelist of files to be searched and includes all text files by default. Another thing which wasn't possible in ack 1 but is in 2 is including file names without dots (i.e. `Gemfile`). If you want to install ack 2.0 alpha through homebrew, I have prepared a recipe for you. Just do a
 
-    brew install https://raw.github.com/lenniboy/ack2-compiled/master/ack2.rb
+    brew install https://raw.github.com/leonardehrenfried/ack2-compiled/master/ack2.rb
 
 ### Testing regular expressions
 To me it was a real eye opener when I discovered visual regex tools. They
