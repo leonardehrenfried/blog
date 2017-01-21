@@ -1,4 +1,4 @@
-permalink:  /:year/:month/:title
+permalink:  /:year/:month/:title/
 baseurl:    /blog
 url:        http://leonard.io/blog
 feed_base:  http://lenni.info/blog
