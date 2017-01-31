@@ -8,7 +8,7 @@ tags:
 published: true
 ---
 So, you've written a library or program in Java or Scala (or any other JVM language) and want to deploy it so that others can use
-it without configuring extra repos? Just deploy it to Maven Central! This is a repository of code artifacts and their metadata
+it without configuring extra repos? Just deploy it to Maven Central! This repository of code artifacts and their metadata
 is _the_ place to publish your code as virtually all JVM build systems pull their dependencies from there.
 
 I published my first artifact to Maven Central with Maven (the tool, not the repository format) in 2011 and back then it was
@@ -58,11 +58,15 @@ Obviously replace the placeholder values appropriately.
 
 In order to be on Maven Central your artifacts have to be signed with PGP. If you already have a PGP key, great! If not create one with:
 
-`sbt pgp-cmd gen-key`
+```
+sbt pgp-cmd gen-key
+```
 
 Then deploy this key to a key server
 
-`pgp-cmd send-key ${keyname} hkp://pool.sks-keyservers.net`
+```
+pgp-cmd send-key ${keyname} hkp://pool.sks-keyservers.net
+```
 
 There are a few key servers around the internet and every few hours they syncronise with
 each other so eventually all keys will be on all servers. Sonatype and Maven/Ivy clients
