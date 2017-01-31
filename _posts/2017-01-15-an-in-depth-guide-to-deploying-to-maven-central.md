@@ -74,7 +74,7 @@ will validate the signature on the artifact with your public key to make sure it
 
 #### Sonatype account
 
-You need to make an account at the Sonatype repo: https://issues.sonatype.org/secure/Signup!default.jspa
+You need to make an account at the Sonatype repo: [https://issues.sonatype.org/secure/Signup!default.jspa](https://issues.sonatype.org/secure/Signup!default.jspa)
 
 They usually takes a few hours to respond and will ask you if you own the domain of your group id. If you don't then maybe
 use the domain of the provider where you host the code such as `com.github.username` as your group id.
