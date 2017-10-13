@@ -32,9 +32,9 @@ when I used it last in ~2011.)
 Add the following plugins to your `project/plugins.sbt`:
 
 ```scala
-addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "1.1")
+addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "2.0")
 
-addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.0.0")
+addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.1.0")
 ```
 
 and the following keys to your project settings in your main `build.sbt`:
