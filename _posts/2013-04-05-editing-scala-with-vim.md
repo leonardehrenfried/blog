@@ -16,7 +16,7 @@ the topics of immutability and shared state. The functional mindset forces
 you to think mainly about input and output of functions and this training,
 I feel, makes me a better programmer even when programming in a language other than Scala.
 
-####Tools
+### Tools
 I'm not really an IDE lover, quite the opposite, but I have started taking
 a shine to the comforts that Intelli-J is offering when writing Java.
 
@@ -26,16 +26,16 @@ really slow which makes it pretty unusable to me.
 
 There is no question that the language is beautiful but the tools aren't.
 
-####Enter vim
+### Enter vim
 
 I'm already using vim for everything other than Java so I hunted around the
 web in order to find plugins. I've been quite satisfied with the
 following combination.
 
-####[vim-scala](https://github.com/derekwyatt/vim-scala)
+###[vim-scala](https://github.com/derekwyatt/vim-scala)
 Obviously, you will need syntax highlighting and this plugin provides that.
 
-####[neocomplcache](https://github.com/Shougo/neocomplcache)
+###[neocomplcache](https://github.com/Shougo/neocomplcache)
 
 The built-in vim autocomplete isn't great for Scala but the [`neocomplcache`](https://github.com/Shougo/neocomplcache) plugin
 makes typing out long Scala class or package names easier. There is no
@@ -43,7 +43,7 @@ semantic analysis behind it so all this plugin does is string matching but
 I was very surprised to realise that this takes you a long way. To me at least
 it is adequate.
 
-####ctags
+### ctags
 
 In order to enable jump-to-source navigation you need to configure ctags to
 index scala files. You can do that by adding the following to your `~/.ctags`:
@@ -83,7 +83,7 @@ to the definition of the type. That's pretty nifty!
 
 If you want to go back to where you were before the jump press `Ctrl-T`.
 
-####Sorting of imports
+### Sorting of imports
 
 Based on feedback from a collegue who was complaining that my imports always
 look messy I have [contributed a command](https://github.com/derekwyatt/vim-scala/pull/24)

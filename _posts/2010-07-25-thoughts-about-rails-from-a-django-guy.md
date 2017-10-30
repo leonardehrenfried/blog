@@ -17,7 +17,7 @@ I had read and heard lots of praise about Rails and was planning to add another 
 
 Whilst working through the documentation and tutorials I couldn’t help comparing Rails to Django, since it is the framework I’m most comfortable with and it takes a little time to unwire your assumptions and expectations of how a web framework ought to work. So, basically this is a one-sided mini-review of Rails.
 
-###The Ruby language
+### The Ruby language
 
 I didn't know any Ruby before this project but everybody knows these days, that the blogging engine is the new 'Hello World'. Ruby and Python are more alike than they’re different. Both are interpreted, use duck typing and both impose little structure on the source files. Ruby is slightly less readable to me due to the following things
 
@@ -27,9 +27,9 @@ I didn't know any Ruby before this project but everybody knows these days, that 
 
 I've read that Ruby lacks the amount of non-web libraries that Python has. But that doesn't bother me since I almost exclusively do web stuff. I'm simply not clever enough to have a use for for SciPy and NumPy.
 
-###What I don't like about Rails
+### What I don't like about Rails
 
-####ActiveRecord
+### ActiveRecord
 
 The abovementioned project obviously didn't need a really complicated data model: a handful of entities with some simple many-to-ones. Particularly because ActiveRecored markets itself as a simpler solution to heavyweight enterprise ORMs like Hibernate, I found setting up this schema surprisingly difficult. Compared to Django, Rails introduces a few new concepts, which took me little bit to get my head around it.
 
@@ -39,21 +39,21 @@ The abovementioned project obviously didn't need a really complicated data model
 
 Particularly due to that last point I kept thinking that ActiveRecord is just SQL rewritten in Ruby.
 
-###Templating
+### Templating
 
 Using pure Ruby in .erb templates surely is powerful but to me smells of Java Scriptlet, doesn't it? I subscribe to the view that the template language is for designers and should only allow safe constructs. Not really a biggie, but rather a little quirk.
-###No built-in admin
+### No built-in admin
 This is something I love about Django and find kind of a deal-breaker with Rails. Django gives you great looking admin interfaces for editing your data out of the box. It takes you 95% of where you want your admin area to be and I myself never had the need to customize the template. I hear that with the introduction of the newforms library it is now not so hard anymore to write your own admin views. All in all, I'm pretty surprised that Rails hasn't even got anything remotely similar. (Maybe I have given up looking too soon? Let me know in the comments.)
 
-###What I like about Rails
-####Directory structure
+### What I like about Rails
+### Directory structure
 Rails is pretty good at giving you a feeling of where your files ought to be in the directory structure, by neatly giving you a controller per model. Also, I quite like the distinction between the top level folders <code>config</code>, <code>app</code>, <code>db</code>, <code>test</code> etc. This is, in my opinion, something of a weak point in Django, where I never quite understood where stuff is supposed to live. Yes, you say that you should be separating your code into individual Django apps but I think that is the wrong abstraction level and like the concepts of plugins somehow better. That might be the Java developer in me speaking - a gem is much more like a JAR.
 
-###Dependency management
+### Dependency management
 
 It's great that you can specify the needed gems for your application and even tell the runtime that you need a specific version of Rails. I haven't tried it but it seems that the needed gems are automatically installed if they aren't already. Managing your dependencies is kinda non-existent in Django.
 
-###Grass isn't always greener
+### Grass isn't always greener
 
 Well, I don't really know what I expected but Rails does not magically solve all problems and does not trivialise web development. On the other hand I wasn't unhappy with Django - I just wanted to expand my horizon.
 

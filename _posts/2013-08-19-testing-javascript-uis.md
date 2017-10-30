@@ -27,7 +27,7 @@ Today I chatted to a friend about this and have started to develop at theory
 why that might be. I think it has partially something to do with how Javascript
 testing was done in the browser.
 
-#### JS and HTML
+### JS and HTML
 
 On traditional web apps it worked mostly like this:
 
@@ -56,7 +56,7 @@ and this would assume a DOM structure which would look something like this
 </div>
 ```
 
-#### Components
+### Components
 
 But a new style of programming the DOM, fuelled by the rise of client-side MVC
 frameworks like Backbone, came into being: the UI became parcelled up into
@@ -77,7 +77,7 @@ $(".my-widget").append(rendered);
 Can you spot the difference here? The component itself brings its own HTML
 to the table instead of manipulating some globally available DOM.
 
-#### How is this different?
+### How is this different?
 
 If we write our UI widgets in this style testing is rather easy. Before, if
 you wanted to really test your JS you had to test both the HTML the server
@@ -103,7 +103,7 @@ easy too. You no longer have to do some DOM gymnastics to find out if your
 server has generated the correct response: just parse the JSON and assert
 against that.
 
-#### Conclusion
+### Conclusion
 
 Nowadays, JS-heavy projects are thought of as API clients to the server that
 produces JSON. This has enabled a style of frontend development that takes

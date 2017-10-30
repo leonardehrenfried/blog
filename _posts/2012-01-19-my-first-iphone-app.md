@@ -21,7 +21,7 @@ So, without further ado:
 
 <img title="Screenshot" src="https://lh6.googleusercontent.com/-vagzuzd5WSE/TxhB36YqI6I/AAAAAAAAAFM/8grWWMWqvJE/w333-h500-k/cashgroupfinder.jpg" alt="" width="320" height="480" />
 
-###App Store links
+### App Store links
 
   - <a href="http://itunes.apple.com/us/app/cash-group-finder/id492498061?mt=8">English</a>
   - <a href="http://itunes.apple.com/de/app/cash-group-finder/id492498061?mt=8">German</a>

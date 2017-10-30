@@ -34,5 +34,5 @@ Apparently, there is all sorts of stuff happening with Grand Central and OpenCL 
 
 There is one little gripe: I used to have a developer preview version of Safari 4 which allowed websites to be saved as a web application which then had it own dock icon (and presumably its own process). I assumed this feature was held back until Snow Leopard came out but I can't seem to find it. Hmm.
 
-####Baseline
+### Baseline
 I like it particularly for the fact that it isn't jam-packed with features that no-one needs but is a good solid exercise in improving the core of the system. I got this update for £10 and I think even £30 would be no-brainer for all Leopard users. I don't think I would pay the full retail price (£129.00 for the box set with iLife) for it though.

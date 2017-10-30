@@ -14,7 +14,7 @@ meta:
   _edit_last: '1'
   dsq_thread_id: '756516218'
 ---
-###Short answer
+### Short answer
 
 It's the same for all Google accounts:
 
@@ -22,7 +22,7 @@ It's the same for all Google accounts:
 
 Your username is not part of the OpenID.
 
-###Long answer
+### Long answer
 
 Well, it seems little strange that Google, your friendly neighbourhood search giant, is so coy about its OpenID support. I had to search around for quite a while to find my OpenID URL, which is the thing you paste into the OpenID box at the service you want to sign up to.
 
@@ -36,7 +36,7 @@ Anyway, the URL that lets you sign into OpenID enabled services is
 
 This URL is the same for all Google accounts; it redirects you to Google's servers for you to confirm the logging in process. That's it.
 
-###A good example
+### A good example
 
 Stackoverflow.com is doing OpenID signing in right. I doesn't ask you to fiddle with an OpenID URL but rather gives you nice and easy logos to click on - it fills in the URL for you. Well done!
 

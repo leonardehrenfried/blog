@@ -26,11 +26,11 @@ This weekend I took it for a spin and here are my observations.
 (Mind you, this isn't a thorough review but rather a
 rough-and-ready stream of consciousness.)
 
-####Nice integration with sbt
+### Nice integration with sbt
 
 You can keep using your build system and IDE. Everything worked out-of-the-box.
 
-####Compiler
+### Compiler
 
 The compilation process is not slower than the compiler that targets the JVM.
 However, the Scala compiler _is_ quite slow but you get used to it because it
@@ -40,13 +40,13 @@ The compiler produces unreadable code which will make debugging harder.
 <del>I've read that source maps are available, but I haven't been able to make them work
 yet.</del> Source maps do work and can help you debugging!
 
-####Community
+### Community
 
 It's rather small, but that shouldn't surprise you since ScalaJS has only
 come out of beta a few weeks ago. You should expect to write stuff yourself
 because it doesn't exist yet.
 
-####Libraries and frameworks
+### Libraries and frameworks
 
 This is currently a weak spot. Obviously, you can use the fantastic Scala
 core library which to me is one of the main appeals. I haven't found out how
@@ -66,14 +66,14 @@ me a lot since this is the way that really make a community thrive. Yes, it
 does cause fragmentation to a certain degree but I feel that it's a price worth
 paying for finding the best ideas and practises.
 
-####File size
+### File size
 
 In short: it's acceptable. With fast optimisation my dummy app clocked in at
 ~600kb. A full optimisation brought that down to around 140kb. Really large
 apps probably will be a few MB, but that's not something unheard off with
 apps written in native JS, too.
 
-####In summary
+### In summary
 
 I'm very excited about ScalaJS and I think it's very promising. It gets
 a lot of things right and people are working on the things that aren't so

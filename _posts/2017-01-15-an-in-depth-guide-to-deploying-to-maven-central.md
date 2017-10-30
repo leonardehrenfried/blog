@@ -18,7 +18,7 @@ In 2016 I did it again with `sbt` and `mvn` and was pleasantly surprised about h
 
 In this blog post I'm going into detail about how to deploy an artifact with sbt.
 
-#### Sonatype
+### Sonatype
 
 Only very few projects deploy to Maven Central directly. Most small projects these days deploy to Maven Central via the
 [Sonatype Repository](http://central.sonatype.org/pages/ossrh-guide.html). This in turn then syncs with Maven Central.
@@ -27,7 +27,7 @@ There is an [official guide](http://www.scala-sbt.org/release/docs/Using-Sonatyp
 we are going to use a couple of plugins so we don't have to use the confusing UI of the Sonatype Repository. (At least it was confusing
 when I used it last in ~2011.)
 
-#### sbt setup
+### sbt setup
 
 Add the following plugins to your `project/plugins.sbt`:
 
@@ -54,7 +54,7 @@ pomIncludeRepository := (_ => false),
 
 Obviously replace the placeholder values appropriately.
 
-#### GPG keys
+### GPG keys
 
 In order to be on Maven Central your artifacts have to be signed with PGP. If you already have a PGP key, great! If not create one with:
 
@@ -72,7 +72,7 @@ There are a few key servers around the internet and every few hours they syncron
 each other so eventually all keys will be on all servers. Sonatype and Maven/Ivy clients
 will validate the signature on the artifact with your public key to make sure it is exactly what you have published.
 
-#### Sonatype account
+### Sonatype account
 
 You need to make an account at the Sonatype repo: [https://issues.sonatype.org/secure/Signup!default.jspa](https://issues.sonatype.org/secure/Signup!default.jspa)
 
@@ -81,7 +81,7 @@ use the domain of the provider where you host the code such as `com.github.usern
 
 After a while the ticket will be closed and you'll be told that you now can publish into your group id.
 
-#### Configure credentials
+### Configure credentials
 
 Create a file `$HOME/.sbt/(sbt-version)/sonatype.sbt`
 
@@ -94,7 +94,7 @@ credentials += Credentials("Sonatype Nexus Repository Manager",
         "(Sonatype user name)",
         "(Sonatype password)")
 ```
-#### Publishing
+### Publishing
 
 Once you have the permission to upload you can simply run
 

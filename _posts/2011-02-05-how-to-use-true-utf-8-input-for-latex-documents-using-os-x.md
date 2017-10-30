@@ -19,7 +19,7 @@ LaTex is a great typesetting system. It (or at least its predecessor) was writte
 
 However, the ordinary LaTex distribution has a big drawback: It can only use ASCII as its input encoding. There was a hack that would let you could use Unicode characters in your document by preprocessing the file and replacing all non-ASCII characters with their escaped counterpart, but that was ugly and just that - a hack. Even worse, some characters (namely from Asian languages) do not have an escaped form so they could not be used in LaTex, full stop.
 
-###TexLive
+### TexLive
 
 This problem was solved by a Tex distribution that supports the full range of Unicode characters: [Xetex](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=xetex). It was originally written for OS X only but has since been ported to a range of platforms.
 Xetex allows you to type set a document using all of UTF-8 supported scripts without nasty hackery, as seen in the following screenshot.
@@ -28,7 +28,7 @@ Xetex allows you to type set a document using all of UTF-8 supported scripts wit
 
 Some additional features, which might or might not be interesting for you, are improved font support for OTF files and some advanced ligatures features. All of this might not rock your world but it is all nice to know that it is there. In short XeTex is a modern Tex system.
 
-###Installation and invokation
+### Installation and invokation
 Xetex has since 2007 been incorporate by the TexLive distribution. There is an ordinary installation package for OS X but I prefer to use Macports for my package management, so I will walk you through that. First of all install the texlive base package with a
 
     sudo port install texlive
@@ -44,6 +44,6 @@ After the installation you will be able to compile LaTex documents with the foll
     xelatex input.tex
 
 The default out put is PDF, so if you want something different, go and check the manual.
-###Gotchas
+### Gotchas
 XeTex assumes that you will feed it UTF-8 characters natively so the above-mentioned encoding hacks won't be necessary and will trip up XeTex. Just remove lines like these:
 {% highlight latex %}\usepackage[utf8]{inputenc}{% endhighlight %}

@@ -14,12 +14,12 @@ meta:
   dsq_thread_id: '756516507'
 ---
 It seems installing Ruby 1.9 on Ubuntu without the use of RVM isn’t all that trivial. I had to poke around the system for quite a while before I got it running.
-###Why not RVM?
+### Why not RVM?
 Well, I tried RVM but compiling Ruby <strong>took 3 hours</strong> on my EC2 micro instance and was eating all my CPU so that my webserver was basically not available anymore. To me that isn't acceptable. Besides, I think it is highly wasteful to compile packages from source when there are precompiled versions available. I admit that apt is too slow to keep up with the rapidly moving gems ecosystem but for the Ruby interpreter itself I strongly prefer the OS to handle the installation.
 
 Besides I don't really want to use different versions of Ruby at the same time. I just want something that isn't Ubuntu's default 1.8.7, which in Ruby years is ancient.
 
-###The steps
+### The steps
 The good news is that as of writing this, Ruby 1.9.2 is available without any PPAs straight from the official Canonical package repos. The bad news is that information about how to get it is thin on the ground.
 
 For starters the package for Ruby 1.9.2 is called ruby1.9.1 and Googling around, it wasn't immediately obvious that any version of Ruby 1.9 is even possible on Ubuntu.
@@ -48,7 +48,7 @@ sudo update-alternatives --config gem
 # now try
 ruby --version{% endhighlight %}
 This installs Ruby 1.9.2 and sets that to be the default ruby on your system. Crucially, it also installs rubygems for that interpreter and sets that to be the default. (Thanks for the initial snippet to <a href="http://michalf.me/blog:make-ruby-1-9-default-on-ubuntu-9-10-karmic-koala">Michał Frąckowiak</a>. His version got me most of the way there.)
-###Uninstalling Ruby 1.8
+### Uninstalling Ruby 1.8
 If you, like me, ran a Rails app on 1.8 you probably have a bit of stuff hanging around the file system. Lets clean that up.
 
 First uninstall all gems from the 1.8 installation with:

@@ -13,7 +13,7 @@ meta:
   _edit_last: '1'
   dsq_thread_id: '758272507'
 ---
-###A thought or two about CSS precompilers
+### A thought or two about CSS precompilers
 
 I had heared of Sass repeatedly for a while now but so far I had always mentally filed CSS precompilers under "Interesting concept, but probably not all that useful for me". I thought that CSS is fine as it is and after all it's just a bunch of style definitions, right?
 
@@ -23,7 +23,7 @@ When a coworker suggested using a CSS precompiler to help our <a href="http://st
 
 What a difference! I may end up sounding like a used-car salesman but it really is a difference like day and night. I'd love to tell you lots of reasons why these precompilers are great, but unfortunately Jason Z. from 37 signals has done a <a href="http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade">much better job</a>.
 
-###Wasn't this post suppossed to be about vim?
+### Wasn't this post suppossed to be about vim?
 
 Lets talk business then. I'm using vim to edit LESS and it looks like this:
 
@@ -31,11 +31,11 @@ Lets talk business then. I'm using vim to edit LESS and it looks like this:
 
 I can recommend a trio of plugins for LESS and general CSS3 editing:
 
-####[vim-less](https://github.com/groenewege/vim-less)
+###[vim-less](https://github.com/groenewege/vim-less)
 
 This plugin's syntax highlighting was fairly feature-rich to begin with but I have added a few extra features including indenting and autocompletion and the original author has merged them back to his branch. The plugin's compatibility has led me to check out vim-css-colors.
 
-####[vim-css-colors](https://github.com/skammer/vim-css-color">vim-css-colors)
+###[vim-css-colors](https://github.com/skammer/vim-css-color">vim-css-colors)
 
 This great plugin visualises a color expressed in hex, RGBa or HSLa and paints the background underneath it in the corresponding color. If you're not sure what I mean, here's screenshot:
 
@@ -43,11 +43,11 @@ This great plugin visualises a color expressed in hex, RGBa or HSLa and paints t
 
 This may look like a toy to some, but LESS lets you have a file with just the colour palette of your app/website and seeing them all visualised is very nice. It also helps you to reuse the same variable name for each colour rather than re-introducing new ones.
 
-####[vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
+###[vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
 
 This has a very complete syntax file for CSS3 and I have  added support for this plugin in vim-less. That works pretty well and those fancy new CSS3 properties are then also displayed with correct syntax highlighting applied.
 
-###Improvements for the future
+### Improvements for the future
 
 The current autocomplete (hit Ctr-X, Ctrl-O if you've never used it) that ships with standard vim is pretty complete for CSS2. However there is no autocomplete script for CSS3. Looking at the <a href="http://code.google.com/p/vim/source/browse/runtime/autoload/csscomplete.vim">CSS2 version</a>, it shouldn't actually be too hard to parse the syntax highlight files and add the new properties to the existing script.
 

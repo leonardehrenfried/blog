@@ -18,7 +18,7 @@ Recently, I had a bit of a data loss scare where I couldn't access my Google Acc
 
 I use a Synology NAS at home which has plenty of storage left to keep my roughly 2GB of email many times over. It has a variant of Linux installed and besides a nice web-based UI it has also the very handy ability to ssh into the box and install additional software through a package manager called ipkg.
 
-###The setup
+### The setup
 Login to your NAS as root and install getmail with these commands:
 
 ```bash
@@ -69,7 +69,7 @@ Now everything is in place for getmail to do its work. Do a test run with the fo
 This will start downloading your messages but depending on the size of your email history will take up to a few hours. There is the distinct probability that your ssh connection will time out and drop due to your inactivity. That's why I ran the first go with nohup so that me logging out wouldn't stop the process.
 {% highlight bash %}nohup getmail -q --getmaildir=/volume1/Gmail & > /volume1/Gmail/nohup.out{% endhighlight %}
 
-###Cron
+### Cron
 
 Lastly, we obviously want to run getmail periodically and fetch the newest message so open up <code>/etc/crontab</code> with a text editor like vim (you probably need to install it with ipgk first) and add the following line:
 {% highlight bash %}0       3       *       *       3       root    /bin/su -c "/opt/bin/getmail -q --getmaildir=/volume1/Gmail" admin{% endhighlight %}

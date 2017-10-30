@@ -18,7 +18,7 @@ If you want to make use of Google's hosting platform for all sorts of JavaScript
 
 [This](http://encosia.com/2008/12/10/3-reasons-why-you-should-let-google-host-jquery-for-you/) blog post explains why Google hosting is a Good Idea.
 
-###Addition
+### Addition
 We have started using Prototype and script.aculo.us at work. Here's Google's URL for it:
 
 ```html
