@@ -1,11 +1,16 @@
 permalink:  /:year/:month/:title/
 baseurl:    /blog
+
 url:        http://leonard.io/blog
+
 feed_base:  http://lenni.info/blog
-plugins:    [jekyll-paginate, redcarpet]
+
+plugins:
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
 theme:      jekyll-whiteglass
 paginate:   5
-markdown:   redcarpet
-redcarpet:
-  extensions: [smart]
+comments:   true
+
 
