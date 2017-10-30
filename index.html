@@ -1,39 +1,6 @@
 ---
-layout: layout
-title: Recent posts
+# You don't need to edit this file, it's empty on purpose.
+# Edit whiteglass' home layout instead if you want to make some changes.
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
 ---
-{% for post in paginator.posts %}
-  <section>
-    <div class="eight columns">
-      <h4 class="post_title"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h4>
-      <span class="post_date">{{ post.date | date: "%d %B, %Y" }}</span>
-      {{ post.content }}
-      <p>
-        <a id="more" href="{{site.baseurl}}{{ post.url }}#disqus_thread">Comments &raquo;</a>
-      </p>
-    </div>
-    <br class="clear">
-  </section>
-{% endfor %}
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a href="/blog/" class="previous">
-        <button class="light"><i class="icon-chevron-left"></i></button>
-      {% else %}
-        <a href="/blog/page{{paginator.previous_page}}" class="previous">
-        <button class="light"><i class="icon-chevron-left"></i></button>
-      {% endif %}
-    </a>
-  {% endif %}
-
-  <span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
-
-  {% if paginator.next_page %}
-    <a href="/blog/page{{paginator.next_page}}" class="next ">
-      <button class="light"><i class="icon-chevron-right"></i></button>
-    </a>
-  {% endif %}
-</div>
-
