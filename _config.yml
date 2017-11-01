@@ -1,6 +1,9 @@
 permalink:  /:year/:month/:title/
 baseurl:    /blog
 
+title:      Leonard Ehrenfried's notebook
+author:     Leonard Ehrenfried
+
 url:        http://leonard.io/blog
 
 feed_base:  http://lenni.info/blog
