@@ -6,7 +6,7 @@ tags:
   - scala
   - json
   - circe
-published: false
+published: true
 ---
 
 How to combine Circe's semi-automatic derivation with snake case keys took me a little
