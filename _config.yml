@@ -4,14 +4,16 @@ baseurl:    /blog
 title:      Leonard Ehrenfried's notebook
 author:     Leonard Ehrenfried
 
-url:        http://leonard.io/blog
+url:        http://leonard.io
 
-feed_base:  http://lenni.info/blog
+feed:
+  path: feed.xml
 
 plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
+
 theme:      jekyll-whiteglass
 paginate:   5
 comments:   true
