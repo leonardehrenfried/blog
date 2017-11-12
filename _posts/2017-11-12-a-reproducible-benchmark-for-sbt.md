@@ -61,6 +61,9 @@ The timing results are as follows:
 The results are clear: sbt 1.0.0 has seen a substantial slowdown - at
 least for this particular use case.
 
+In case you're wondering, these benchmarks were run on a 2015 Macbook Pro with
+a 2.9 GHz Intel Core i5 and 16 GB of RAM.
+
 ## Future work
 
 I'm planning on tracking and comparing the performance of future sbt versions.
