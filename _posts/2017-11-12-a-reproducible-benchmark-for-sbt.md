@@ -65,7 +65,7 @@ least for this particular use case.
 ## Future work
 
 I'm planning on tracking and comparing the performance of future sbt versions.
-In particular 1.0.4 is going to be release very soon and has some performance
+In particular, 1.0.4 is going to be released very soon and has some performance
 improvement patches.
 
 The benchmark can also be extended with more test case to give insights into a
