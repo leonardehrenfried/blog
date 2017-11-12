@@ -52,12 +52,11 @@ tasks with various sbt versions and measures execution times.
 
 The timing results are as follows:
 
-|command|0.13.16|1.0.3|
+|command|sbt 0.13.16|sbt 1.0.3|
 |--- |--- |--- |
-|prefillCache|87 seconds|125 seconds|
 |startup|37 seconds|45 seconds|
-|compile|89 seconds|129 seconds|
-|compileTwice|107 seconds|189 seconds|
+|compile once |89 seconds|129 seconds|
+|compile twice|107 seconds|189 seconds|
 
 The results are clear: sbt 1.0.0 has seen a substantial slowdown - at
 least for this particular use case.
