@@ -73,7 +73,7 @@ wide range of performance scenarios. Contributions are very welcome!
 
 ## Links
 
-- [Benchmark repository on Github](https://github.com/leonardehrenfried/sbt-performance-benchmark).
-- [Raw results in JSON format](https://github.com/leonardehrenfried/sbt-performance-benchmark/blob/master/reports/large-classpath-2017-11-10T23:09:08.604Z.json).
+- [Benchmark repository on Github](https://github.com/leonardehrenfried/sbt-performance-benchmark)
+- [Raw results in JSON format](https://github.com/leonardehrenfried/sbt-performance-benchmark/blob/master/reports/large-classpath-2017-11-10T23:09:08.604Z.json)
 - [Original performance regression demo repo](https://github.com/cakesolutions/sbt-cake/tree/sbt-perf-regression)
 
