@@ -16,7 +16,7 @@ JEKYLL_POSTS_DIR='./_posts/'
 TITLE=$1
 
 # Replace spaces in title with underscores
-TITLE_STRIPPED=${TITLE// /-}
+TITLE_STRIPPED=`echo "$TITLE" | tr '[:upper:]' '[:lower:]' | tr ' ' '-'`
 
 # Permalink
 PERMALINK=${TITLE_STRIPPED}
