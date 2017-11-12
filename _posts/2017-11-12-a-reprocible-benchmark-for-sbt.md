@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A reprocible benchmark for sbt
+title: A reproducible benchmark for sbt
 tags:
   - scala
   - sbt
@@ -33,38 +33,47 @@ one.
 
 ## Methodology
 
-I took an sbt project provided by Sam Halliday that had pathologically bad
-performance, wrote a little bit of tooling around executing and timing 
-sbt commands and running them with various sbt versions.
+I took an sbt project provided by [Sam Halliday](https://github.com/fommil) that 
+had pathologically bad performance.
 
-The benchmarking code is available on [Github](https://github.com/leonardehrenfried/sbt-performance-benchmark).
-
-## Results
-
-The problem with the test sbt project is its very large classpath and many
-submodules - it contains almost no source code itself! 
+The problem with this project is its very large classpath and many
+submodules - it contains almost no source code itself!
 Before compilation even starts a large amount of time is spent on checking
 if classpath entries have changed.
 
-The benchmark sets sbt up to download all the required dependencies in order
-to ensure fairness.
+Around this test repository wrote a little bit of tooling for executing and timing
+sbt commands and running them with various sbt versions.
+
+The benchmark sets sbt up to download all the required dependencies before the 
+actual task under benchmark in order to ensure fairness. It then benchmark
+tasks with various sbt versions and measures execution times.
+
+## Results
+
+The timing results are as follows:
 
 |command|0.13.16|1.0.3|
 |--- |--- |--- |
 |prefillCache|87 seconds|125 seconds|
 |startup|37 seconds|45 seconds|
 |compile|89 seconds|129 seconds|
-|compileTwice|107 seconds|189 seconds|..
-
-  
+|compileTwice|107 seconds|189 seconds|
 
 The results are clear: sbt 1.0.0 has seen a substantial slowdown - at
 least for this particular use case.
 
-I'm hoping this has 
+## Future work
 
-Raw results with information are also available [in JSON format](https://github.com/leonardehrenfried/sbt-performance-benchmark/blob/master/reports/large-classpath-2017-11-10T23:09:08.604Z.json).
+I'm planning on tracking and comparing the performance of future sbt versions.
+In particular 1.0.4 is going to be release very soon and has some performance
+improvement patches.
 
+The benchmark can also be extended with more test case to give insights into a
+wide range of performance scenarios. Contributions are very welcome!
 
+## Links
 
+- [Benchmark repository on Github](https://github.com/leonardehrenfried/sbt-performance-benchmark).
+- [Raw results in JSON format](https://github.com/leonardehrenfried/sbt-performance-benchmark/blob/master/reports/large-classpath-2017-11-10T23:09:08.604Z.json).
+- [Original performance regression demo repo](https://github.com/cakesolutions/sbt-cake/tree/sbt-perf-regression)
 
