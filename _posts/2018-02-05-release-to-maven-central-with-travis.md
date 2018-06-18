@@ -1,10 +1,9 @@
-
 ---
 layout: post
 title: Release to Maven Central with Travis
+published: false
 tags:
   - scala
-
 ---
 
 ```
