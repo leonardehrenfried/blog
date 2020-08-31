@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A reproducible benchmark for sbt
+lang: de
 tags:
   - scala
   - sbt
