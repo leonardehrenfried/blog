@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Itron Openway mit Volkszähler
+lang: de
 tags:
-  - ltron
+  - itron
   - openway
   - volkszaehler
 ---
@@ -30,13 +31,26 @@ Hier die Kurzversion:
 - [Weidmann Optokopf](https://shop.weidmann-elektronik.de/index.php?page=product&info=24) kaufen
 - Raspberry Pi kaufen
 - Volkszähler-Image auf RasPi installieren
-- vzlogger konfigurieren
+- D0-Schnittstelle (optische Datenausgabe) am Zähler aktivieren
+- `vzlogger` konfigurieren
+
+### Datenausgabe über optische Schnittstelle
+
+Um Daten aus dem Itron auszulesen muss die optische Schnittstelle mittels Taschenlampe
+und PIN-Eingabe aktiviert werden. Ziel ist es das Gerät in den "Info On" Modus, was
+dann auch im Display steht, zu setzen. Das ist eine sehr fummelige Angelegenheit und ist im
+Handbuch des Herstellers und in [der des Weidmann Optokopfes](https://shop.weidmann-elektronik.de/media/files_public/ef65a5f91f3dabc8252faaababd91b30/Freischaltung_D0_Schnittstelle.pdf) 
+beschrieben.
 
 ### Eigenheiten
+Um den den Channel anzulegen, habe ich auch nicht den MySQL-Client benutzt, sondern
+die Volkszähler-UI. Hierbei ist es wichtig als Typen "El. Energie (Leistungswerte))" auszuwählen.
 
-Die Konfiguration des Itron Openway ist ein wenig anders als beim von Manuel beschriebene Modell.
+![Volkszähler Setup](/blog/assets/volkszaehler-leistungsstaende.png)
 
-- Die Datenausgabe des Stromzählers muss nicht initialisiert werden. Wenn das Gerät auf "Info P"-Modus ist,
+Die Konfiguration des `vzlogger` für den Itron Openway ist ein wenig anders als beim von Manuel beschriebenen Modell.
+
+- Die Datenausgabe des Stromzählers muss nicht initialisiert werden. Wenn das Gerät auf "Info On"-Modus ist,
   werden die Lichtumpulse alle Sekunde ausgegeben.
 - Die Daten sind im sml-Protokoll kodiert.
 
@@ -73,7 +87,7 @@ an die Volkszähler-Middleware zu schicken, habe ich folgende `vzlogger.conf`-Da
       "duplicates": 3600,
       "channels": [
         {
-          "uuid": "1409f3e0-e2d7-11ea-a75c-7ff223a388c4",
+          "uuid": "${von der UI generierte UUID}",
           "middleware": "http://localhost/middleware.php",
           "identifier": "1-0:16.7.0",
           "aggmode": "none"
@@ -83,10 +97,11 @@ an die Volkszähler-Middleware zu schicken, habe ich folgende `vzlogger.conf`-Da
   ]
 }
 ```
-Um den den Channel anzulegen, habe ich auch nicht den MySQL-Client benutzt, sondern
-die Volkszähler-UI. Hierbei ist es wichtig als Typen "El. Energie (Leistungswerte))" auszuwählen.
 
-![Volkszähler Setup](/blog/assets/volkszaehler-leistungsstaende.png)
+In dieser Konfiguration wird der Zählerstand nicht weiterverabeitet. Solltest Du an diesem
+interessiert sein, dann erhöhe die `verbosity` auf 15 und schau' Dir die Werte und
+deren ID im Log an. Dafür könntest Du einen zweiten Channel anlegen und auch diese Werte
+aufzeichnen.
 
 ### Foto des fertigen Setups
 
